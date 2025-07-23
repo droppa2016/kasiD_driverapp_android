@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="trip"
+            type="co.za.kasi.model.Trip" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+        android:layout_marginVertical="@dimen/component_spacing_5dp"
+        android:backgroundTint="@color/card_background"
+        android:elevation="@dimen/component_spacing_20dp"
+        app:cardCornerRadius="@dimen/component_spacing_10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/component_spacing_10dp"
+            android:paddingVertical="@dimen/component_spacing_15dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/image_icon"
+                android:src="@drawable/dashboard_icon__map_tier"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_7dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tripNumberText"
+                    style="@style/TextViewRecyclerViewHeading"
+                    android:text="@{trip.tripNumber}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sub_title_font_size"
+                    tools:text="TripNumber" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tripDescriptionText"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@+id/tripNumberText"
+                    android:layout_marginBottom="@dimen/component_spacing_10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{trip.description}"
+                    tools:text="Trip Description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/rateText"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@id/tripDescriptionText"
+                    android:text="@string/rate" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/rateValue"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@id/tripDescriptionText"
+                    android:layout_alignParentEnd="true"
+                    android:text='@{"R " +String.valueOf(trip.rate)}'
+                    tools:ignore="RelativeOverlap"
+                    tools:text="00" />
+
+                <include
+                    android:id="@+id/border_1"
+                    layout="@layout/grey_view_component"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rateText"
+                    android:layout_marginVertical="@dimen/component_spacing_4dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/waybillsText"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@+id/border_1"
+
+                    android:text="@string/waybills" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/waybilsValue"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@+id/border_1"
+                    android:layout_alignParentEnd="true"
+                    android:maxLength="10"
+                    android:text="@{String.valueOf(trip.waybills)}"
+                    tools:text="00" />
+
+                <include
+                    android:id="@+id/border_2"
+                    layout="@layout/grey_view_component"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/waybillsText"
+                    android:layout_marginVertical="@dimen/component_spacing_4dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/routeText"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@+id/border_2"
+                    android:text="@string/route" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/routeValue"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@+id/border_2"
+                    android:layout_alignParentEnd="true"
+                    android:ellipsize="end"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text="@{trip.route != null ? trip.route : `-`}"
+                    tools:text="00" />
+
+                <include
+                    android:id="@+id/border_3"
+                    layout="@layout/grey_view_component"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/routeText"
+                    android:layout_marginVertical="@dimen/component_spacing_4dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/amountText"
+                    style="@style/TextViewSubHeading"
+                    android:textSize="@dimen/regular_font_size"
+                    android:layout_below="@+id/border_3"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="@string/total_amount" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/amountValue"
+                    style="@style/TextViewSubHeading"
+                    android:textSize="@dimen/regular_font_size"
+                    android:layout_below="@+id/border_3"
+                    android:layout_alignParentEnd="true"
+                    android:maxLength="10"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text='@{"R " + String.valueOf(trip.amount)}'
+                    tools:text="00" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

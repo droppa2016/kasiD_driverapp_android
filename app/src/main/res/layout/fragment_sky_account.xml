@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="co.za.kasi.fragments.bottomnav.SkyAccountFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/component_spacing_15dp"
+            android:paddingVertical="@dimen/component_spacing_10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/card_background"
+                app:cardCornerRadius="@dimen/component_spacing_15dp"
+                app:contentPadding="@dimen/component_spacing_15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/component_spacing_7dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextViewRecyclerViewHeading"
+                            android:gravity="center_vertical"
+                            android:text="@string/personal_information" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/component_spacing_7dp"
+                            android:paddingBottom="5dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:contentDescription="@string/profile_icon"
+                                android:src="@drawable/accounts_section_icon" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/name" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txtName"
+                                style="@style/TextViewDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:gravity="center_vertical|end"
+                                tools:text="Philani Ram" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/grey_view_component" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/component_spacing_7dp"
+                            android:paddingBottom="5dp">
+
+                            <ImageView
+                                android:id="@+id/email_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:contentDescription="@string/email_icon"
+                                android:src="@drawable/email_blue_icon_login" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/email" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txtEmail"
+                                style="@style/TextViewDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:gravity="center_vertical"
+                                tools:text="PhilaniJackRam@gmail.com" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/grey_view_component" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/component_spacing_7dp"
+                            android:paddingBottom="5dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:contentDescription="@string/contact_number_icon"
+                                android:src="@drawable/blue_phone_icon" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/contact_number" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txtContactNumber"
+                                style="@style/TextViewDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:gravity="center_vertical|end"
+                                tools:text="087 1234 569" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/grey_view_component" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_15dp"
+                android:backgroundTint="@color/card_background"
+                app:cardCornerRadius="@dimen/component_spacing_15dp"
+                app:contentPadding="@dimen/component_spacing_15dp">
+
+                <LinearLayout
+                    android:id="@+id/vehicleCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_card"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextViewRecyclerViewHeading"
+                        android:paddingBottom="@dimen/component_spacing_7dp"
+                        android:text="@string/vehicle_information" />
+
+                    <LinearLayout
+                        android:id="@+id/vehicleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/component_spacing_7dp"
+                            android:paddingBottom="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/blue_truck_deliveries_icon"
+                                android:drawablePadding="@dimen/component_spacing_7dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/vehicle_make" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/vehicleMake"
+                                style="@style/TextViewDescription"
+                                android:gravity="center_vertical"
+                                tools:text="Mini Van" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/grey_view_component" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/component_spacing_7dp"
+                            android:paddingBottom="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/blue_vehicle_color_icon"
+                                android:drawablePadding="@dimen/component_spacing_7dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/vehicle_model" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/vehicleModel"
+                                style="@style/TextViewDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                tools:text="NP 200" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/grey_view_component" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/component_spacing_7dp"
+                            android:paddingBottom="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/registration_number_icon"
+                                android:drawablePadding="@dimen/component_spacing_7dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/reg_number" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/vehicleRegNum"
+                                style="@style/TextViewDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                tools:text="BJ 65 LM GP" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/grey_view_component" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/component_spacing_7dp"
+                            android:paddingBottom="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/registration_number_icon"
+                                android:drawablePadding="@dimen/component_spacing_7dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/vin_number" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/vehicleVinNum"
+                                style="@style/TextViewDescription"
+                                android:gravity="center_vertical"
+                                tools:text="XYZ 123 ABC" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/grey_view_component" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_15dp"
+                android:backgroundTint="@color/card_background"
+                app:cardCornerRadius="@dimen/component_spacing_15dp"
+                app:contentPadding="@dimen/component_spacing_15dp">
+
+                <LinearLayout
+                    android:id="@+id/appInfoCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_card"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:paddingBottom="@dimen/component_spacing_7dp"
+                        style="@style/TextViewRecyclerViewHeading"
+                        android:text="@string/app_information" />
+
+                    <LinearLayout
+                        android:id="@+id/appInformation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/component_spacing_7dp"
+                            android:paddingBottom="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/play_store_icon"
+                                android:drawablePadding="@dimen/component_spacing_7dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/app_version" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/appVersion"
+                                style="@style/TextViewDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                tools:text="1.0.0" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/grey_view_component" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signOutbtn"
+        style="@style/ButtonMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/sign_out"
+        android:textColor="@color/white" />
+
+</LinearLayout>

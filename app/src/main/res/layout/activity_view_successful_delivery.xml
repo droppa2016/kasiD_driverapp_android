@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ViewBucketBooking">
+
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/standard_spacing"
+                android:paddingVertical="@dimen/component_spacing_25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:visibility="gone"
+                        android:src="@drawable/alarm_clock_icon_upcoming_booking_card" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextViewDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="@string/waybill_number"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:id="@+id/tvWaybillNumber"
+                            android:textColor="@color/black"
+                            tools:text="Placeholder text"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/grey_view_component"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:layout_marginStart="@dimen/component_spacing_10dp"
+                        android:layout_marginBottom="@dimen/component_spacing_10dp"
+                        android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextViewDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:maxLines="1"
+                            android:text="@string/service_type"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextViewDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:maxLines="1"
+                            tools:text="Placeholder text"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:id="@+id/tvServiceType"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/grey_view_component"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:layout_marginStart="@dimen/component_spacing_10dp"
+                        android:layout_marginBottom="@dimen/component_spacing_10dp"
+                        android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextViewDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:maxLines="1"
+                            android:text="@string/consignee_name"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextViewDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:maxLines="1"
+                            tools:text="Placeholder text"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:id="@+id/tvCompanyName"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/grey_view_component"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:layout_marginStart="@dimen/component_spacing_10dp"
+                        android:layout_marginBottom="@dimen/component_spacing_10dp"
+                        android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            tools:ignore="NestedWeights">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:maxLines="1"
+                                android:text="@string/consignee_phone_no"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:textColor="@color/grey_text"
+                                android:textSize="@dimen/regular_font_size" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/component_spacing_3dp"
+                                android:maxLines="1"
+                                tools:text="Placeholder text"
+                                android:id="@+id/tvPhoneNo"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/regular_font_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lytContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:maxLines="1"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                style="@style/TextViewDescription"
+                                android:text="@string/consignee_contact"
+                                android:textColor="@color/grey_text"
+                                android:textSize="@dimen/regular_font_size" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextViewDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/component_spacing_3dp"
+                                tools:text="Placeholder text"
+                                android:maxLines="1"
+                                android:id="@+id/tvContact"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/regular_font_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="visible"
+                    android:layout_marginStart="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:gravity="bottom"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="2dp"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="@string/pickup_address"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/address_marker_blue_icon" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:id="@+id/tvPickUpAddress"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            tools:ignore="NestedWeights" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:layout_gravity="end"
+                            android:visibility="gone"
+                            android:id="@+id/tvViewAll"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/skynet_color"
+                            android:text="@string/view_all"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="50dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextViewDescription"
+                        android:layout_marginTop="2dp"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="@string/consignee_address"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextViewDescription"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            tools:text="Placeholder text"
+                            android:layout_weight="5"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:id="@+id/tvDroppOffAddress"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            tools:ignore="NestedWeights" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:layout_gravity="end"
+                            android:visibility="gone"
+                            android:id="@+id/tvViewAll1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/skynet_color"
+                            android:text="@string/view_all"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextViewDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="Conformance Date and Time"
+                        android:textColor="@color/skynet_color"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_7dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/standard_spacing">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:maxLines="1"
+                            android:text="@string/date_"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextViewDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:maxLines="1"
+                            tools:text="Placeholder text"
+                            android:id="@+id/tvPickUpDate"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:maxLines="1"
+                            android:text="@string/time"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextViewDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            tools:text="Placeholder text"
+                            android:maxLines="1"
+                            android:id="@+id/tvTime"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextViewDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="@string/instruction"
+                        android:textColor="@color/skynet_color"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextViewDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    tools:text="Placeholder text"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:id="@+id/tvSpecialInstractions"
+                    android:textColor="@color/grey_text"
+                    android:textSize="@dimen/regular_font_size" />
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+                <LinearLayout
+                    android:id="@+id/lytRefHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextViewDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="@string/reference"
+                        android:textColor="@color/skynet_color"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvReference"
+                    style="@style/TextViewDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:textColor="@color/grey_text"
+                    android:textSize="@dimen/regular_font_size"
+                    tools:text="Placeholder text" />
+
+                <include
+                    android:id="@+id/lytReferenceLine"
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextViewDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="@string/parcels"
+                        android:textColor="@color/skynet_color"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_7dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/standard_spacing">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvAccountNumber"
+                            style="@style/TextViewDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            tools:text="Placeholder text" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:maxLines="1"
+                            android:id="@+id/tvLoad"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/igmClientProfile"
+                        android:src="@drawable/man" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:id="@+id/tvClientNames"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/large_title_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:text="@string/contact_person"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:visibility="gone"
+                        android:id="@+id/imgDialToClient"
+                        android:src="@drawable/blue_customer_call_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"
+                        android:background="@drawable/button_background"
+                        android:text="Done"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/secure_delivery_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

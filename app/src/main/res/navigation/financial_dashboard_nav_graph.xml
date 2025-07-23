@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/financial_dashboard_nav_graph"
+    app:startDestination="@id/skynetReportsFragment">
+
+    <fragment
+        android:id="@+id/skynetReportsFragment"
+        android:name="co.za.kasi.fragments.SkyNetReportsFragment"
+        android:label="fragment_skynet_reports"
+        tools:layout="@layout/fragment_skynet_reports" />
+    <fragment
+        android:id="@+id/skynetRatesFragment"
+        android:name="co.za.kasi.fragments.SkyNetRatesFragment"
+        android:label="fragment_skynet_rates"
+        tools:layout="@layout/fragment_skynet_rates" />
+    <fragment
+        android:id="@+id/skyReportsRevenueFragment"
+        android:name="co.za.kasi.fragments.SkyNetReportsRevenueFragment"
+        android:label="fragment_sky_reports_revenue"
+        tools:layout="@layout/fragment_sky_reports_revenue" />
+    <fragment
+        android:id="@+id/skyReportsVolumeFragment"
+        android:name="co.za.kasi.fragments.SkyNetReportsVolumeFragment"
+        android:label="fragment_sky_reports_volume"
+        tools:layout="@layout/fragment_sky_reports_volume" />
+    <fragment
+        android:id="@+id/skyReportsExpensesFragment"
+        android:name="co.za.kasi.fragments.SkyNetReportsExpensesFragment"
+        android:label="fragment_sky_reports_expenses"
+        tools:layout="@layout/fragment_sky_reports_expenses" />
+</navigation>

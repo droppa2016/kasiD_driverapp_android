@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon_side_menu"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_bookings"
+            android:icon="@drawable/booings_icon_side_menu"
+            android:visible="false"
+            android:title="@string/menu_booking" />
+        <item
+            android:id="@+id/nav_retail_bookings"
+            android:icon="@drawable/retail_bookings_icon_side_menu"
+            android:visible="false"
+            android:title="@string/menu_retail_bookings" />
+        <item
+            android:id="@+id/nav_skynet_sdx"
+            android:icon="@drawable/home_icon_side_menu"
+            android:visible="false"
+            android:title="@string/menu_sdx" />
+        <item
+            android:id="@+id/nav_scan"
+            android:icon="@drawable/scan_pod_icon_side_menu"
+            android:visible="false"
+            android:title="@string/menu_scan" />
+
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/dashboard_icon_side_menu"
+            android:visible="false"
+            android:title="@string/menu_dashboard" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile_icon_side_menu"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/nav_terms"
+            android:visible="false"
+            android:icon="@drawable/outline_info_24"
+            android:title="@string/Ts_Cs" />
+    </group>
+</menu>

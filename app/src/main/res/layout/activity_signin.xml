@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    tools:context=".SignIn"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <include
+            layout="@layout/background_splash_gradient"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="20dp"
+            android:elevation="32dp"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginBottom="55dp"
+            android:orientation="vertical"
+            android:background="@drawable/white_card">
+
+            <include layout="@layout/unauthorized_header_component"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="15dp"
+                android:paddingHorizontal="25dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_above="@+id/signUpLayout"
+                    android:paddingTop="@dimen/standard_spacing">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edtEmail"
+                        android:drawableStart="@drawable/email_blue_icon_login"
+                        android:background="@drawable/text_background"
+                        app:textInputLayoutFocusedRectEnabled="false"
+                        android:hint="@string/idNumber"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textColorHint="@color/light_grey"
+                        android:imeActionLabel="@string/done"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textStyle="bold"
+                        android:inputType="text"
+                        android:textColor="@color/grey_text"
+                        android:drawablePadding="7dp"
+                        android:paddingHorizontal="10dp"/>
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edtPassword"
+                        android:layout_marginTop="@dimen/component_spacing_10dp"
+                        android:drawableStart="@drawable/key_blue_password_icon_login"
+                        android:background="@drawable/text_background"
+                        app:textInputLayoutFocusedRectEnabled="false"
+                        android:hint="@string/password"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textColorHint="@color/light_grey"
+                        android:inputType="number"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textStyle="bold"
+                        android:textColor="@color/grey_text"
+                        android:drawablePadding="@dimen/component_spacing_7dp"
+                        android:paddingHorizontal="10dp"/>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:text="@string/sign_in"
+                        android:background="@drawable/button_background"
+                        android:textColor="@color/white"
+                        android:id="@+id/btnSignInt"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/forgot_passwordText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="@string/forgot_password"
+                        android:textSize="@dimen/regular_font_size"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"
+                        android:textColor="@color/skynet_color"
+                        tools:ignore="RtlHardcoded" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/signUpLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center|bottom">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/do_not_have"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/haven_t_registered_yet"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textColor="@color/grey_text"
+                        android:gravity="center_horizontal|top"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Visit www.skynet.co.za"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sub_title_font_size"
+                        android:id="@+id/tvSignUp"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/skynet_color"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>

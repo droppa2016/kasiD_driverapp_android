@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "560005876586",
+    "firebase_url": "https://droppa-1258.firebaseio.com",
+    "project_id": "droppa-1258",
+    "storage_bucket": "droppa-1258.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560005876586:android:c0b4e9746847c309",
+        "android_client_info": {
+          "package_name": "co.za.kasi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560005876586-bm92e7b0cknkpnv4mksmi7du7httnvj3.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "560005876586-75mgc7d1gvf36bbff97ljrvssjukvf7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrc__E-1lLV7FcRLy8qOaZFcnCR-B7oF4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

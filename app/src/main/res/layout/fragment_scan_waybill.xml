@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".fragments.secureDeliverypackage.ScanWaybillFragment">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <LinearLayout
+        android:id="@+id/parcelsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/component_spacing_5dp"
+        android:paddingHorizontal="@dimen/component_spacing_10dp"
+        android:visibility="visible"
+        android:layout_below="@+id/viewFinder"
+        android:layout_above="@+id/btnLayout">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextViewHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/parcels"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/numTotalParcels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="normal"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="@dimen/component_spacing_10dp"
+        android:paddingVertical="@dimen/component_spacing_10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/scanAllParcels"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/button_background_red_borders"
+            android:text="@string/mark_all_as_scanned"
+            android:layout_marginBottom="@dimen/component_spacing_10dp"
+            android:visibility="gone"
+            android:textColor="@color/skynet_red"
+            android:layout_marginEnd="@dimen/component_spacing_5dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            tools:ignore="ButtonStyle" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        <Button
+            android:fontFamily="@font/poppins_semi_bold"
+            android:id="@+id/btnManualEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background_red_borders"
+            android:text="@string/add_manually"
+            android:visibility="visible"
+            android:textColor="@color/skynet_red"
+            android:layout_marginEnd="@dimen/component_spacing_5dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btnDone"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="@string/done"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            tools:ignore="ButtonStyle"
+            android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dimOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:clickable="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    android:id="@+id/lytVerifyOptios"
+    app:behavior_peekHeight="0dp"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:alpha="0.4"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/card_background"
+                app:contentPadding="@dimen/component_spacing_25dp"
+                app:cardCornerRadius="@dimen/component_spacing_25dp"
+                android:layout_marginBottom="-25dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="25dp"
+                    android:paddingHorizontal="@dimen/component_spacing_15dp"
+                    android:gravity="center_horizontal">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign in"
+                        android:textStyle="bold"
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/large_title_font_size"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:text="Scan waybill"
+                        android:gravity="center"
+                        android:background="@drawable/button_background"
+                        android:textColor="@color/white"
+                        android:id="@+id/btnScanWaybill"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:text="Verify client"
+                        android:gravity="center"
+                        android:background="@drawable/button_background"
+                        android:textColor="@color/white"
+                        android:id="@+id/btnVerifyClient"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:text="Skip"
+                        android:gravity="center"
+                        android:background="@drawable/button_background_positive"
+                        android:textColor="@color/skynet_color"
+                        android:id="@+id/btnSkipVerification"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

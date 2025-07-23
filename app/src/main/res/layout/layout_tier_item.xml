@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginHorizontal="@dimen/component_spacing_7dp"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/tier_card_background"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/component_spacing_10dp"
+    android:paddingVertical="@dimen/component_spacing_15dp"
+    app:contentPaddingBottom="@dimen/component_spacing_10dp"
+    app:contentPaddingTop="@dimen/component_spacing_10dp">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:src="@drawable/dashboard_icon__map_tier" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/component_spacing_7dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tier_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoe_ui"
+            android:text="TIER"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sub_title_font_size"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tier_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tier_heading"
+            android:fontFamily="@font/segoe_ui"
+            android:text="loren jbyfcgvhbjnkmjbhvcgvbhnjkml"
+            android:textColor="@color/grey_text" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/minimum_waybill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tier_subtitle"
+            android:layout_marginTop="@dimen/component_spacing_15dp"
+            android:fontFamily="@font/segoe_ui"
+            android:text="Minimum Waybills"
+            android:textColor="@color/black"
+            android:textSize="@dimen/regular_font_size"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/max_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tier_subtitle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/component_spacing_15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/blue_tier_background" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                android:fontFamily="@font/segoe_ui"
+                android:maxLength="10"
+                android:text="0000000000"
+                android:textColor="@color/skynet_color"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/border_1"
+            layout="@layout/grey_view_component"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@id/minimum_waybill"
+            android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/maximum_waybill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/border_1"
+            android:layout_marginTop="@dimen/component_spacing_7dp"
+            android:fontFamily="@font/segoe_ui"
+            android:text="Minimum Waybills"
+            android:textColor="@color/black"
+            android:textSize="@dimen/regular_font_size"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/max_layout"
+            android:layout_below="@+id/border_1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/component_spacing_10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/blue_tier_background" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/component_spacing_7dp"
+                android:fontFamily="@font/segoe_ui"
+                android:maxLength="10"
+                android:text="0000000000"
+                android:textColor="@color/skynet_color"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/border_2"
+            layout="@layout/grey_view_component"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@id/maximum_waybill"
+            android:layout_marginTop="@dimen/component_spacing_15dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/sub_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/border_2"
+            android:layout_marginTop="@dimen/component_spacing_7dp"
+            android:fontFamily="@font/segoe_ui"
+            android:text="@string/sub_total"
+            android:textColor="@color/black"
+            android:textSize="@dimen/regular_font_size"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/amount_sub_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/border_2"
+            android:layout_marginTop="@dimen/component_spacing_7dp"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/segoe_ui"
+            android:text="R20 000.00"
+            android:textColor="@color/black"
+            android:textSize="@dimen/regular_font_size"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

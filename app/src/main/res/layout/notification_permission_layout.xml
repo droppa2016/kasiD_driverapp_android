@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/component_spacing_15dp"
+    android:paddingBottom="@dimen/component_spacing_15dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/component_spacing_4dp"
+        android:paddingHorizontal="@dimen/component_spacing_30dp"
+        android:paddingVertical="@dimen/component_spacing_10dp"
+        android:backgroundTint="@color/card_background"
+        app:contentPadding="@dimen/component_spacing_15dp"
+        app:cardCornerRadius="@dimen/component_spacing_15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/booking_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/outline_notification_bell" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/heading_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/booking_icon"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/segoe_ui"
+                android:maxLines="1"
+                android:text="Notifications"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sub_title_font_size"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/main_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heading_title"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center"
+                android:text="This app requires notification access to provide maximum user experience "
+                android:textAllCaps="false"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/regular_font_size"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_text"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDismiss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_below="@+id/main_text"
+                    android:layout_marginTop="@dimen/component_spacing_7dp"
+                    android:background="@drawable/button_background_positive"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Dismiss"
+                    android:textColor="@color/skynet_color"
+                    android:textSize="@dimen/regular_font_size"
+                    android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+                    android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAllow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/component_spacing_7dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="@dimen/component_spacing_5dp"
+                    android:background="@drawable/booking_widget_view_button"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="center"
+                    android:text="Allow"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

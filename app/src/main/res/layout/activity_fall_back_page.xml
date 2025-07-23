@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/onboarding_gradient"
+    tools:context=".FallBackPage">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        android:backgroundTint="@color/card_background"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="40dp"
+        app:cardCornerRadius="40dp">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="20dp">
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentTop="true"
+                   android:layout_above="@+id/bottomview">
+
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:gravity="center_horizontal"
+                       android:orientation="vertical">
+
+                       <com.airbnb.lottie.LottieAnimationView
+                           android:layout_width="match_parent"
+                           android:layout_height="200dp"
+                           android:id="@+id/lottie_file"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="35dp"
+                           app:lottie_autoPlay="true"
+                           app:lottie_loop="true"
+                           app:lottie_fileName="server_error.json"/>
+
+                       <com.google.android.material.textview.MaterialTextView
+                           android:id="@+id/txtErrorTitle"
+                           style="@style/TextAppearance.MaterialComponents.Headline1"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/component_spacing_30dp"
+                           android:text="@string/system_error"
+                           android:textAlignment="center"
+                           android:textColor="@color/skynet_color"
+                           android:textSize="@dimen/large_text_font_size"
+                           android:textStyle="bold" />
+
+
+                       <com.google.android.material.textview.MaterialTextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="2dp"
+                           android:fontFamily="@font/segoe_ui"
+                           android:gravity="center"
+                           android:maxLines="2"
+                           android:id="@+id/txtErrorMessage"
+                           android:paddingHorizontal="@dimen/standard_spacing"
+                           android:text="@string/techical_error_message"
+                           android:textColor="@color/grey_text"
+                           android:textSize="@dimen/regular_font_size" />
+                   </LinearLayout>
+
+               </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="25dp"
+                    android:id="@+id/bottomview"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sub_title_font_size"
+                        android:text="Go Back"
+                        android:id="@+id/btnRefresh"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_style_10dp"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

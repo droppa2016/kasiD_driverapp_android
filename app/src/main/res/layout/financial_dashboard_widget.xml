@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/component_spacing_4dp"
+    android:paddingHorizontal="@dimen/component_spacing_30dp"
+    android:paddingVertical="@dimen/component_spacing_10dp"
+    android:backgroundTint="@color/card_background"
+    app:contentPadding="@dimen/component_spacing_15dp"
+    app:cardCornerRadius="@dimen/component_spacing_15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/booking_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/blue_dashboard_icon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/heading_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/booking_icon"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/segoe_ui"
+            android:maxLines="1"
+            android:text="Dashboard"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sub_title_font_size"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading_title"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center"
+            android:text="View your month to day progress report, profits and expenses "
+            android:textAllCaps="false"
+            android:textColor="@color/grey_text"
+            android:textSize="@dimen/regular_font_size"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGoToFinancialDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/main_text"
+            android:layout_marginTop="@dimen/component_spacing_7dp"
+            android:background="@drawable/booking_widget_view_button"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center"
+            android:text="Financial Dashboard"
+            android:textColor="@color/white"
+            android:textSize="@dimen/regular_font_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

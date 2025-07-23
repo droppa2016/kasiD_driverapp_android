@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/skynet_color">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnBack"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/baseline_arrow_back_24"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTitle"
+            style="@style/TextAppearance.MaterialComponents.Headline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"
+            android:text="@string/sign_on_glass"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_font_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/parcelsListingArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/component_spacing_10dp"
+            android:elevation="@dimen/component_spacing_25dp"
+            android:padding="@dimen/component_spacing_10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/component_spacing_15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/component_spacing_10dp">
+
+                <RelativeLayout
+                    android:id="@+id/expandCollapseSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/totalNumberOfItemsText"
+                        style="@style/TextViewHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/component_spacing_10dp"
+                       android:layout_alignParentEnd="true"
+                        tools:text="(50)"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/descriptionText"
+                        style="@style/TextViewHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/delivered_parcels"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_below="@id/expandCollapseSection"
+                    android:id="@+id/parcelsArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/parcelListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"
+                        android:divider="@color/background"
+                        android:dividerHeight="1dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <co.za.kasi.utils.SignaturePadView
+            android:layout_below="@+id/parcelsListingArea"
+            android:id="@+id/signaturePad"
+            android:layout_marginTop="@dimen/component_spacing_10dp"
+            android:layout_above="@id/btnLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+
+        <ImageView
+            android:layout_below="@+id/parcelsListingArea"
+            android:id="@+id/previewImage"
+            android:layout_marginTop="@dimen/component_spacing_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/signature_display"
+            android:visibility="gone"
+            android:layout_above="@+id/btnLayout1"
+            android:scaleType="fitCenter"
+            android:background="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/btnLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/component_spacing_15dp"
+            android:paddingBottom="@dimen/component_spacing_15dp"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/clear"
+                android:id="@+id/crdClear"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:background="@drawable/button_background_negative_borders"
+                android:layout_weight="1"
+                android:textColor="@color/skynet_red"
+                android:layout_marginHorizontal="@dimen/component_spacing_5dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/apply_signature"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/crdSaveSignature"
+                android:background="@drawable/button_background"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/component_spacing_5dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

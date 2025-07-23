@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".CompletedBookingActivity">
+
+    <LinearLayout
+        android:id="@+id/header_background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/component_spacing_30dp"
+        android:background="@drawable/profile_header"
+        android:orientation="vertical"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="75dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment"
+                android:layout_marginTop="@dimen/component_spacing_20dp"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:text="Pickup Address"
+                    android:textColor="@color/grey_text"
+                    android:textSize="@dimen/regular_font_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_3dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/address_marker_blue_icon"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="2"
+                        android:id="@+id/pickUpAddress_View"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="Sammy Marks Square, 138 Church St, Pretoria Central, Pretoria, 0002"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <include
+                layout="@layout/grey_view_component"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="@dimen/component_spacing_10dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment"
+                android:layout_marginTop="@dimen/component_spacing_5dp"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:text="Drop Off Address"
+                    android:textColor="@color/grey_text"
+                    android:textSize="@dimen/regular_font_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_3dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/address_marker_red_icon" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="2"
+                        android:id="@+id/dropOffAddress_View"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/grey_view_component"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/component_spacing_10dp"
+                android:layout_marginTop="@dimen/component_spacing_10dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/blue_client_details_icon" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:text="Client Details"
+                    android:textColor="@color/skynet_color"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_7dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Name"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:id="@+id/clientName_View"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Mobile Number"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:id="@+id/clientNumber_View"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="*** *** ****"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Signed"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="In App"
+                        android:id="@+id/clientSignedStatus_View"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/receipient"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <include
+                layout="@layout/grey_view_component"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/component_spacing_10dp"
+                android:layout_marginTop="@dimen/component_spacing_10dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/blue_recipient_details_icon" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:text="Recipient Details"
+                    android:textColor="@color/skynet_color"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_7dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Name"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="User names"
+                        android:id="@+id/recipientName_View"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Mobile Number"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="*** *** ****"
+                        android:id="@+id/recipientNumber_View"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Signed"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:id="@+id/recipientSignedStatus_View"
+                        android:maxLines="1"
+                        android:text="Manual"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+
+            <include
+                layout="@layout/grey_view_component"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/component_spacing_10dp"
+                android:layout_marginTop="@dimen/component_spacing_10dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/blue_calendar_date" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:text="Appointment"
+                    android:textColor="@color/skynet_color"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_7dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment"
+                    android:gravity="bottom"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/component_spacing_15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:visibility="gone"
+                            android:src="@drawable/blue_calendar_date" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:maxLines="1"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:text="Date"
+                                android:textColor="@color/grey_text"
+                                android:textSize="@dimen/regular_font_size" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextAppearance.MaterialComponents.Headline1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bookingDate_View"
+                                android:layout_marginTop="@dimen/component_spacing_3dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:maxLines="1"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:textColor="@color/black"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/sub_title_font_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:visibility="gone"
+                            android:src="@drawable/blue_alarm_clock" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:maxLines="1"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:text="Pickup Time"
+                                android:textColor="@color/grey_text"
+                                android:textSize="@dimen/regular_font_size" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextAppearance.MaterialComponents.Headline1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/component_spacing_3dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:maxLines="1"
+                                android:id="@+id/bookingTime_View"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:textColor="@color/black"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/sub_title_font_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="12"
+                    android:gravity="bottom"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/blue_calendar_date" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:text="Date"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/sub_title_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Vehicle Type"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:id="@+id/tvVehicleType"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <include
+                layout="@layout/grey_view_component"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/component_spacing_10dp"
+                android:layout_marginTop="@dimen/component_spacing_10dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/blue_instruction_icon_booking_information" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:text="Instruction"
+                    android:textColor="@color/skynet_color"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/segoe_ui"
+                android:maxLines="2"
+                android:id="@+id/txtComments_View"
+                android:paddingHorizontal="@dimen/component_spacing_10dp"
+                android:text=" `"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/regular_font_size" />
+
+            <include
+                layout="@layout/grey_view_component"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/component_spacing_10dp"
+                android:layout_marginTop="@dimen/component_spacing_10dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/blue_customer_requirement_icon" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:text="Customer Requirements"
+                    android:textColor="@color/skynet_color"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_7dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Labour Required"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:id="@+id/labourRequired_View"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Delivery Load"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:id="@+id/deliveryLoad_View"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include
+                layout="@layout/grey_view_component"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/component_spacing_10dp"
+                android:layout_marginTop="@dimen/component_spacing_10dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/blue_wallet_icon" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:text="Payment Details"
+                    android:textColor="@color/skynet_color"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_7dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Due Date"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:id="@+id/paymentDue_View"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:text="Payment Status"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/paymentStatus_View"
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:textColor="@color/skynet_red"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/sub_title_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/component_spacing_15dp"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:background="@color/skynet_color"
+            android:paddingHorizontal="@dimen/component_spacing_25dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtDueToYou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/component_spacing_3dp"
+                android:fontFamily="@font/segoe_ui"
+                android:maxLines="1"
+                android:text="Due To You"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sub_title_font_size"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtPaymentFee_View"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/component_spacing_3dp"
+                android:fontFamily="@font/segoe_ui"
+                android:maxLines="1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text_font_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="22dp"
+        android:paddingTop="12dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/photo_chooser_dialog_background"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:paddingHorizontal="12dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Upload License"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sub_title_font_size"
+            android:textStyle="bold"
+            android:fontFamily="@font/segoe_ui"
+            android:textColor="@color/skynet_color"/>
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goToCameraBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/next_button_background"
+        android:textColor="@color/white"
+        android:textSize="@dimen/regular_font_size"
+        android:textStyle="bold"
+        android:text="TAKE A PHOTO FROM CAMERA"
+        android:fontFamily="@font/segoe_ui"
+        android:gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/uploadFromFileBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/next_button_background"
+        android:text="UPLOAD FROM FILE"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:fontFamily="@font/segoe_ui"
+        android:textSize="@dimen/regular_font_size"
+        android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

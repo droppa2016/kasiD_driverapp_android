@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".CompletedBucketBookings">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_weight="0.3"
+        android:background="@color/skynet_color"
+        android:layout_centerInParent="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/component_spacing_25dp"
+                android:layout_marginTop="@dimen/component_spacing_30dp"
+                android:layout_marginBottom="@dimen/component_spacing_20dp"
+                android:backgroundTint="@color/skynet_red"
+                android:paddingVertical="@dimen/component_spacing_25dp"
+                app:cardCornerRadius="@dimen/component_spacing_25dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/addressHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"
+                        android:layout_marginBottom="@dimen/component_spacing_15dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Delivery Information"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/addressHeader"
+                        android:background="@color/white"
+                        android:paddingHorizontal="@dimen/component_spacing_20dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/dateSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="@dimen/component_spacing_25dp"
+                            android:layout_marginTop="@dimen/component_spacing_15dp"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Date"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/timeSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/component_spacing_15dp"
+                            android:layout_marginRight="@dimen/component_spacing_15dp"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Pickup Time"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/dateTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dateSubHeader"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawableLeft="@drawable/blue_calendar_date"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="01/08/23"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/large_title_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/timeTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/timeSubHeader"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawableLeft="@drawable/blue_alarm_clock"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="8.30 AM"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/large_title_font_size"
+                            android:textStyle="bold" />
+
+
+                        <include
+                            android:id="@+id/line_border1"
+                            layout="@layout/grey_view_component"
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/dateTxt" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/pickupSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line_border1"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/component_spacing_7dp"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawableLeft="@drawable/address_marker_blue_icon"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Pick Up Address"
+                            android:textColor="@color/skynet_color"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/pickupAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pickupSubHeader"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Sammy Marks Square, 138 Church St, Pretoria
+                    Central, Pretoria, 0002"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <include
+                            android:id="@+id/line_border2"
+                            layout="@layout/grey_view_component"
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/pickupAddress" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/dropOffSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line_border2"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/component_spacing_7dp"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawableLeft="@drawable/address_marker_blue_icon"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Drop Off Address"
+                            android:textColor="@color/skynet_color"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/dropOffAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dropOffSubHeader"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                            android:layout_marginBottom="@dimen/component_spacing_15dp"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Sammy Marks Square, 138 Church St, Pretoria
+                    Central, Pretoria, 0002"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtViewAllAddresses"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dropOffAddress"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/component_spacing_7dp"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="View All Addresses"
+                            android:textColor="@color/skynet_color"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/component_spacing_25dp"
+                android:layout_marginBottom="@dimen/component_spacing_10dp"
+                android:backgroundTint="@color/skynet_color"
+                android:paddingVertical="@dimen/component_spacing_7dp"
+                app:cardCornerRadius="@dimen/component_spacing_25dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/customerHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"
+                        android:layout_marginBottom="@dimen/component_spacing_15dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Customer"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/customerHeader"
+                        android:background="@color/white"
+                        android:paddingHorizontal="@dimen/component_spacing_20dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/instructionSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/component_spacing_10dp"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:drawableLeft="@drawable/blue_instruction_icon_booking_information"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Instruction"
+                            android:textColor="@color/skynet_color"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtInstructions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/instructionSubHeader"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_15dp"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut."
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="normal" />
+
+                        <include
+                            android:id="@+id/line_border3"
+                            layout="@layout/grey_view_component"
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/txtInstructions" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/customerRequirementsSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line_border3"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/component_spacing_7dp"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:drawableLeft="@drawable/blue_customer_requirement_icon"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Customer Requirements"
+                            android:textColor="@color/skynet_color"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/labourRequiredSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/customerRequirementsSubHeader"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Labour Required"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/deliveryLoadSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/customerRequirementsSubHeader"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Delivery Load"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtLabourRequired"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/labourRequiredSubHeader"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="Non"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtDeliveryLoad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/labourRequiredSubHeader"
+                            android:layout_alignLeft="@+id/deliveryLoadSubHeader"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="40"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <include
+                            android:id="@+id/line_border4"
+                            layout="@layout/grey_view_component"
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/txtLabourRequired" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/appointmentsSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line_border4"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/component_spacing_7dp"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:drawableLeft="@drawable/blue_calendar_date"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Appointment"
+                            android:textColor="@color/skynet_color"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/appointmentsDateSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/appointmentsSubHeader"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Date:"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/vehicleTypeSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/appointmentsSubHeader"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Vehicle Type"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtAppointmentDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/appointmentsDateSubHeader"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="3 August 2023"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtVehicleType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/appointmentsDateSubHeader"
+                            android:layout_alignLeft="@+id/vehicleTypeSubHeader"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="Mini Van"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/component_spacing_25dp"
+                android:layout_marginBottom="@dimen/component_spacing_10dp"
+                android:backgroundTint="@color/skynet_color"
+                android:paddingVertical="@dimen/component_spacing_7dp"
+                app:cardCornerRadius="@dimen/component_spacing_25dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/paymentsHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"
+                        android:layout_marginBottom="@dimen/component_spacing_15dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Payments"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/paymentsHeader"
+                        android:background="@color/white"
+                        android:paddingHorizontal="@dimen/component_spacing_20dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/paymentDetailsSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/component_spacing_10dp"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:drawableLeft="@drawable/blue_wallet_icon"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Payment Details"
+                            android:textColor="@color/skynet_color"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/paymentDueDateSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/paymentDetailsSubHeader"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Due Date:"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtPaymentStatusSubHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/paymentDetailsSubHeader"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="Payment Status"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/paymentDueDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/paymentDueDateSubHeader"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="07/08/23"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/paymentStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/paymentDueDateSubHeader"
+                            android:layout_alignLeft="@+id/txtPaymentStatusSubHeader"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="NOT PAID"
+                            android:textColor="@color/skynet_red"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <include
+                            android:id="@+id/line_border5"
+                            layout="@layout/grey_view_component"
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/paymentStatus"
+                            android:layout_marginBottom="@dimen/component_spacing_7dp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/DueDateText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line_border5"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="Due to you"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/DueAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line_border5"
+                            android:layout_alignLeft="@+id/txtPaymentStatusSubHeader"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:drawablePadding="@dimen/component_spacing_10dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="R750"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/large_title_font_size"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

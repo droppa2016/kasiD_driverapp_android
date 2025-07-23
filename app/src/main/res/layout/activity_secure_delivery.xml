@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".SecureDelivery">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/scanWaybillLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/scanWaybillCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/scan_parcels"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/grvLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/grvCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/grv_grv_number"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/otpLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/otpCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/otp_caps"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/idLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/idCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/id_passport"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/proofOfLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/proofOfCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/proof_of_residence"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/idcLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/idcCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/id_copy_physical"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/invLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/invCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/inv_signed_invoice"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/binLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/binCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/bin"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sealLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/sealCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/seal"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/contLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/contCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/signed_contract"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cdnLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/cdnCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/cdn"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/grvdLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/grvdCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/grvd"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bastLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/component_spacing_25dp"
+                    android:paddingVertical="@dimen/component_spacing_10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E6E6E6"
+                        app:cardCornerRadius="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/bastCheck"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="15dp"
+                                android:src="@drawable/green_check_circle"
+                                android:visibility="invisible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/component_spacing_25dp"
+                                android:text="@string/bast"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/btnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/component_spacing_10dp"
+            android:paddingVertical="@dimen/component_spacing_10dp">
+
+            <LinearLayout
+                android:id="@+id/glassLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="@dimen/component_spacing_10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <Button
+                    android:id="@+id/btnAddWaybill"
+                    android:layout_width="match_parent"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/component_spacing_5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background_red_borders"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="@string/add_waybill"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:visibility="gone"
+                    tools:ignore="NestedWeights"
+                    tools:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btnSignOnGlass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="@string/sign_on_glass"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/component_spacing_10dp">
+
+                <Button
+                    android:id="@+id/btnRetry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/component_spacing_5dp"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:background="@drawable/button_background_red_borders"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="@string/fail_delivery"
+                    android:textAllCaps="false"
+                    android:textColor="@color/skynet_red" />
+
+                <Button
+                    android:id="@+id/btnDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:textSize="12sp"
+                    android:text="@string/done"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/secure_delivery_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

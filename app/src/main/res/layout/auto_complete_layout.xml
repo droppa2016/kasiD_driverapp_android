@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="@dimen/component_spacing_15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/place_search"
+        android:hint="Search"
+        android:inputType="textPostalAddress"
+        android:padding="15dp"
+        android:layout_marginBottom="@dimen/component_spacing_7dp"
+        android:drawablePadding="@dimen/component_spacing_15dp"
+        android:background="@drawable/text_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/places_recycler_view"
+        android:background="#FFF"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

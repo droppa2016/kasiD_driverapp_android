@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="surface_max_height">150dp</dimen>
+    <!--Font size-->
+    <dimen name="large_text_font">28sp</dimen>
+    <dimen name="large_text_font_size_26">26sp</dimen>
+    <dimen name="large_text_font_size">24sp</dimen>
+    <dimen name="larger_title_font_size">22sp</dimen>
+    <dimen name="large_title_font_size">20sp</dimen>
+    <dimen name="title_font_size">18sp</dimen>
+    <dimen name="sub_title_font_size">16sp</dimen>
+    <dimen name="regular_font_size">14sp</dimen>
+
+    <dimen name="font_weight_500">500</dimen>
+    <dimen name="font_weight_600">600</dimen>
+    <dimen name="font_weight_700">700</dimen>
+    <dimen name="font_weight_800">800</dimen>
+
+    <!--Spacing -->
+
+    <!--inputs spacing-->
+    <dimen name="component_spacing_3dp">3dp</dimen>
+    <dimen name="component_spacing_4dp">4dp</dimen>
+    <dimen name="component_spacing_5dp">5dp</dimen>
+    <dimen name="component_spacing_7dp">7dp</dimen>
+    <dimen name="component_spacing_10dp">10dp</dimen>
+    <dimen name="component_spacing_15dp">15dp</dimen>
+    <dimen name="component_spacing_20dp">20dp</dimen>
+    <dimen name="component_spacing_25dp">25dp</dimen>
+    <dimen name="component_spacing_30dp">30dp</dimen>
+
+    <!--standard spacing-->
+
+    <dimen name="min_standard_spacing">10dp</dimen>
+    <dimen name="standard_spacing">15dp</dimen>
+    <!--***********************************************************************************-->
+
+    <!--Button size-->
+    <dimen name="min_button_height">35dp</dimen>
+    <dimen name="button_height">40dp</dimen>
+    <dimen name="max_button_height">50dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">@dimen/component_spacing_25dp</dimen>
+    <dimen name="activity_vertical_margin">@dimen/component_spacing_25dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="surface_view_height">200dp</dimen>
+
+</resources>

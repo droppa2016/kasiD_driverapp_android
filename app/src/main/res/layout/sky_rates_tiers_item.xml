@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="tier"
+            type="co.za.kasi.model.Tier" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+        android:layout_marginTop="@dimen/component_spacing_5dp"
+        android:backgroundTint="@color/card_background"
+        android:elevation="@dimen/component_spacing_20dp"
+        app:cardCornerRadius="@dimen/component_spacing_15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/component_spacing_10dp"
+            android:paddingVertical="@dimen/component_spacing_15dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/image_icon"
+                android:src="@drawable/dashboard_icon__map_tier" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_7dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/minimum_waybill"
+                    style="@style/TextViewSubHeading"
+                    android:text="@string/minimum_waybills" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/minWayBillValue"
+                    style="@style/TextViewSubHeading"
+                    android:layout_alignParentEnd="true"
+                    android:maxLength="10"
+                    android:padding="@dimen/component_spacing_5dp"
+                    android:text='@{String.valueOf(tier.min)}'
+                    tools:ignore="RelativeOverlap"
+                    tools:text="00" />
+
+                <include
+                    android:id="@+id/border_1"
+                    layout="@layout/grey_view_component"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/minimum_waybill"
+                    android:layout_marginVertical="@dimen/component_spacing_4dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/maximum_waybill"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@id/border_1"
+                    android:text="@string/maximum_waybills" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/maxWayBillValue"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@+id/border_1"
+                    android:layout_alignParentEnd="true"
+                    android:maxLength="10"
+                    android:padding="@dimen/component_spacing_5dp"
+                    android:text='@{tier.max == -1 ? "∞" : String.valueOf(tier.max)}'
+                    tools:text="00" />
+
+                <include
+                    android:id="@+id/border_2"
+                    layout="@layout/grey_view_component"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/maximum_waybill"
+                    android:layout_marginVertical="@dimen/component_spacing_4dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/sub_total"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@+id/border_2"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:textSize="@dimen/regular_font_size"
+                    android:text="@string/sub_total"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/amount_sub_total"
+                    style="@style/TextViewSubHeading"
+                    android:layout_below="@+id/border_2"
+                    android:layout_alignParentEnd="true"
+                    android:text='@{"R " + String.format("%.2f", tier.price)}'
+                    android:textSize="@dimen/regular_font_size"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    tools:text="R20 000.00" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

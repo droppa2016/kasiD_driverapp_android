@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:src="@drawable/skynet_logo2"
+        android:layout_marginTop="15dp"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/unauthorized_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        style="@style/TextAppearance.MaterialComponents.Headline1"
+        android:textColor="@color/skynet_color"
+        android:textSize="@dimen/large_title_font_size"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/unauthorized_subText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/segoe_ui"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingHorizontal="@dimen/standard_spacing"
+        android:text="Skynet Driver App."
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/regular_font_size" />
+</LinearLayout>

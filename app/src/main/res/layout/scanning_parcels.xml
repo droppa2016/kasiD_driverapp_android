@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <include layout="@layout/custon_action_bar" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <co.za.kasi.utils.CameraSurfaceView
+            android:id="@+id/cameraSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/lytonPreview"
+                android:paddingBottom="@dimen/component_spacing_25dp"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:background="@drawable/button_background_red_borders"
+                    android:layout_weight="1"
+                    android:text="Retry"
+                    android:id="@+id/btnRetry"
+                    android:layout_marginHorizontal="@dimen/component_spacing_5dp"
+                    android:textColor="@color/white"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:background="@drawable/button_background"
+                    android:layout_weight="1"
+                    android:id="@+id/btnUpload"
+                    android:layout_marginHorizontal="@dimen/component_spacing_5dp"
+                    android:text="Upload"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crdCaptureParcel"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/component_spacing_25dp"
+                android:backgroundTint="@color/card_background"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="0dp"
+                app:contentPadding="@dimen/component_spacing_3dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_camera_24" />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

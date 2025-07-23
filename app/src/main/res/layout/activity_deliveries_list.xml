@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".DeliveriesList">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/scanSearchLayout"
+            android:background="@drawable/grey_button_borders"
+            android:clickable="true"
+            android:focusable="true"
+            android:queryHint="Search Waybill Number"
+            app:iconifiedByDefault="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clearListBtn"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/component_spacing_5dp"
+            android:layout_marginVertical="2dp"
+            android:background="@drawable/button_background"
+            android:text="@string/clear"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/scanSearchLayout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/component_spacing_5dp"
+            android:layout_marginVertical="2dp"
+            android:background="@drawable/button_background_red_borders">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="7dp"
+                android:contentDescription="@string/scan_to_search"
+                android:src="@drawable/icon_scanner_24" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/startDeliveriesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+        android:layout_marginVertical="@dimen/component_spacing_10dp"
+        android:background="@drawable/button_background"
+        android:text="@string/start_deliveries"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myRec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/emptyStateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/no_waybills_found"
+        android:textColor="@color/grey_text"
+        android:textSize="16sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

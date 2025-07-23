@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "257435451779",
+    "project_id": "skynet-driver-app",
+    "storage_bucket": "skynet-driver-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257435451779:android:88b549833fe532c6ddb6b6",
+        "android_client_info": {
+          "package_name": "co.za.kasi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5aiWVcjeD_bxsmT1FBie9U0RBrDIfuWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".fragments.SkyNetSignInFragment">
+
+    <include layout="@layout/background_splash_gradient" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/white_card"
+        android:elevation="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/kasi_d_logo" />
+
+        <TextView
+            style="@style/TextViewHeading"
+            android:text="@string/sign_in"
+            android:layout_marginTop="@dimen/component_spacing_10dp"
+            android:textColor="@color/skynet_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="25dp"
+            android:paddingTop="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/signUpLayout"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/standard_spacing">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:drawableStart="@drawable/email_blue_icon_login"
+                    android:drawablePadding="7dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:hint="@string/idNumber"
+                    android:imeOptions="actionNext"
+                    android:lines="1"
+                    android:inputType="text"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/grey_text"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold"
+                    app:textInputLayoutFocusedRectEnabled="false" />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:background="@drawable/text_background"
+                    android:drawableStart="@drawable/key_blue_password_icon_login"
+                    android:drawablePadding="@dimen/component_spacing_7dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="10dp"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/grey_text"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold"
+                    app:textInputLayoutFocusedRectEnabled="false" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/forgotPasswordButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="start"
+                    android:text="@string/forgot_password"
+                    android:textAllCaps="false"
+                    android:textColor="@color/skynet_color"
+                    android:textSize="@dimen/sub_title_font_size"
+                    android:textStyle="bold" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/signInButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/component_spacing_25dp"
+                    android:background="@drawable/button_background"
+                    android:text="@string/sign_in"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/forgot_passwordText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/component_spacing_15dp"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/skynet_color"
+                    android:textSize="@dimen/regular_font_size"
+                    android:visibility="gone"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/signUpLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center|bottom"
+                android:orientation="vertical"
+                android:paddingBottom="25dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/do_not_have"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="center_horizontal|top"
+                    android:text="@string/haven_t_registered_yet"
+                    android:textColor="@color/grey_text"
+                    android:textSize="@dimen/regular_font_size" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="center_horizontal"
+                    android:text="@string/visit_www_skynet_co_za"
+                    android:textColor="@color/skynet_color"
+                    android:textSize="@dimen/sub_title_font_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

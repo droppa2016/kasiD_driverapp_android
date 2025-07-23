@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical"
+    tools:context=".fragments.SkyNetReportsExpensesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lytSummery"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            tools:ignore="UselessParent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/description"
+                    android:textColor="@color/quantum_black_100"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:clickable="false"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/amount"
+                    android:textColor="@color/quantum_black_100"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="5dp"
+                android:background="@color/gray_darker" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvExpensesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="15dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lytSummery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_summery_background"
+        android:elevation="@dimen/component_spacing_20dp"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/component_spacing_10dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_10dp">
+
+            <TableRow
+                android:visibility="gone"
+                tools:ignore="UselessParent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/fuel_surcharge"
+                    android:textColor="@color/quantum_white_100"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text=""
+                    android:textColor="@color/quantum_white_100"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFuelSurchargePerc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/_0_"
+                    android:textColor="@color/quantum_white_100"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+            android:gravity="center">
+
+            <TableRow tools:ignore="UselessParent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewRecyclerViewHeading"
+                    android:layout_marginStart="@dimen/component_spacing_5dp"
+                    android:layout_marginEnd="@dimen/component_spacing_20dp"
+                    android:layout_weight="1"
+                    android:text="@string/total_expenses"
+                    android:textColor="@color/quantum_white_100"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalExpenses"
+                    style="@style/TextViewRecyclerViewHeading"
+                    android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                    android:text="@string/r_00_00"
+                    android:textColor="@color/quantum_white_100"
+                    android:textSize="14sp" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

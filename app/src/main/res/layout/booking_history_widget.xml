@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/crdCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+    android:layout_marginTop="@dimen/component_spacing_7dp"
+    android:layout_marginBottom="3dp"
+    android:backgroundTint="@color/card_background"
+    app:cardCornerRadius="@dimen/component_spacing_10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/component_spacing_15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/component_spacing_7dp"
+            android:background="@drawable/new_booking_widget_top_component"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/component_spacing_20dp"
+            android:paddingTop="@dimen/component_spacing_10dp"
+            android:paddingBottom="@dimen/component_spacing_5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextViewDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/waybill_number"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTrackNumberHistory"
+                    style="@style/TextViewDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    tools:text="080011545439" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextViewDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="@string/service_type"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSuburbHistory"
+                    style="@style/TextViewDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold"
+                    tools:text="ON1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/component_spacing_15dp"
+            android:paddingBottom="@dimen/component_spacing_15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvDateHistory"
+                        style="@style/TextViewDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/regular_font_size"
+                        tools:text="2025-06-20" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTime"
+                        style="@style/TextViewDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/skynet_red"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold"
+                        tools:text="12:30" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_3dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="12dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey_line" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_3dp"
+                android:paddingHorizontal="12dp">
+
+                <LinearLayout
+                    android:id="@+id/addressArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:orientation="horizontal">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:src="@drawable/map_widget" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/component_spacing_10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/location_icon"
+                                android:src="@drawable/address_marker_blue_icon" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvPickUpAddressHistory"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/segoe_ui"
+                                android:maxLines="1"
+                                android:paddingStart="@dimen/component_spacing_10dp"
+                                android:textColor="@color/black"
+                                tools:ignore="RtlSymmetry" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            tools:ignore="NestedWeights">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/location_icon"
+                                android:src="@drawable/address_marker_red_icon" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvDropOffAddressHistory"
+                                style="@style/TextViewDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center_vertical"
+                                android:maxLines="4"
+                                android:paddingStart="10dp"
+                                android:textColor="@color/black"
+                                tools:ignore="RtlSymmetry"
+                                tools:text="CNR HERTZOG AND POTGIETER STRE , MUMSFUBEDU - 9640" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/storeNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addressArea"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/storeNametxt"
+                        style="@style/TextViewDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/store_name"
+                        android:textColor="@color/grey_text"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

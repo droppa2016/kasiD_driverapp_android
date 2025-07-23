@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/component_spacing_15dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="11dp"
+            android:backgroundTint="@color/card_background"
+            app:contentPadding="@dimen/component_spacing_15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/person_icon_registration" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/alertTitle"
+                    style="@style/TextViewHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_font_size"
+                    android:textStyle="bold"
+                    android:text="Enter Receiver Name" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Receivers name" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnBackDialog"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_spacing_40dp"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"
+                        android:background="@drawable/button_background"
+                        android:layout_marginEnd="@dimen/component_spacing_5dp"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:text="Back" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSubmitName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/component_spacing_40dp"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/green_button_background"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:text="Submit" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</ScrollView>

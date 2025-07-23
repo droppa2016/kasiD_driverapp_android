@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BucketBookingTracking">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+        <include layout="@layout/multiple_pick_ups_widget"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/crdNavigate"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="@dimen/component_spacing_30dp"
+            android:backgroundTint="@color/skynet_color"
+            app:contentPadding="@dimen/component_spacing_5dp"
+            android:layout_gravity="center ">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Routing"
+                android:textColor="@color/white"
+                style="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textSize="@dimen/sub_title_font_size"
+                android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+                android:drawableLeft="@drawable/route_icon_available_bookings_butoon"
+                android:gravity="center_vertical"
+
+                android:drawablePadding="@dimen/component_spacing_15dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:contentPadding="@dimen/component_spacing_7dp"
+            android:layout_alignParentRight="true"
+            app:cardCornerRadius="40dp"
+            android:id="@+id/crdMyLocation"
+            android:layout_gravity="right"
+            android:background="@color/card_background"
+            android:backgroundTint="@color/card_background"
+            android:layout_marginEnd="@dimen/component_spacing_15dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_my_location_24"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/card_background"
+        android:layout_marginTop="@dimen/component_spacing_10dp"
+        app:contentPaddingTop="@dimen/standard_spacing"
+        app:contentPaddingBottom="@dimen/standard_spacing"
+        app:cardCornerRadius="@dimen/component_spacing_25dp"
+        android:layout_marginBottom="-25dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="35dp"
+            android:orientation="vertical"
+            tools:ignore="MissingClass">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/component_spacing_3dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:id="@+id/txtViewAddresses"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:text="@string/multiple_pick_ups"
+                    android:textColor="@color/black"
+                    android:paddingTop="@dimen/component_spacing_10dp"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/sub_title_font_size"
+                    android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/alarm_clock_icon_upcoming_booking_card" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="@string/pickup_time"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:id="@+id/txtPickUpTime"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="@string/_08_00_am"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/sub_title_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <include
+                layout="@layout/grey_view_component"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rcvAddresses"
+                android:paddingBottom="@dimen/component_spacing_5dp"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnATPickUp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/max_button_height"
+                android:layout_marginTop="@dimen/component_spacing_15dp"
+                android:text="@string/arrived_at_pick_up"
+                android:textSize="@dimen/sub_title_font_size"
+                android:paddingHorizontal="@dimen/component_spacing_4dp"
+                android:drawablePadding="@dimen/component_spacing_15dp"
+                android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/slider_icon"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+
+
+            <!--<in.shadowfax.proswipebutton.ProSwipeButton
+                android:id="@+id/swipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:padding="4dp"
+                app:arrow_color="#33FFFFFF"
+                app:bg_color="#0A6D95"
+                app:btn_radius="4"
+                app:btn_text="Start Trip"
+                app:button_bottom_padding="10dp"
+                app:button_left_padding="20dp"
+                app:button_right_padding="20dp"
+
+                app:button_top_padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:text_color="@android:color/white"
+                app:text_size="13sp" />-->
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

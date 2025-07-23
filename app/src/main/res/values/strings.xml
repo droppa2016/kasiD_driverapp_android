@@ -1,0 +1,469 @@
+<resources>
+
+    <string name="app_name">Kasi D</string>
+
+    <string name="Notification_Listener">Notification Listener</string>
+    <string name="ACTION_NOTIFICATION_LISTENER">co.za.droppa.ACTION_NOTIFICATION_LISTENER</string>
+    <string name="notification">notification</string>
+    <string name="connection">android.net.wifi.supplicant.STATE_CHANGE</string>
+    <string name="connection_bundle">connection</string>
+    <string name="connection_status">connection_status</string>
+    <string name="android_net_conn_connectivity_change">android.net.conn.CONNECTIVITY_CHANGE</string>
+    <!--*********************************** local storage keys ******************************************-->
+    <string name="local_DB">local_DB</string>
+    <string name="Fist_time_visit">Fist_time_visit</string>
+    <string name="active_status">active_status</string>
+    <string name="user_account">user_account</string>
+    <string name="skynet_driver_account">skynet_driver_account</string>
+    <string name="driver_data">driver_data</string>
+    <string name="fees">fees</string>
+    <string name="profile">profile</string>
+    <string name="driver_auto_login">driver_auto_login</string>
+    <string name="new_notifications">new_notification</string>
+    <string name="token_bearer">Bearer </string>
+    <string name="POINT_LATITUDE_KEY">POINT_LATITUDE_KEY</string>
+    <string name="POINT_LONGITUDE_KEY">POINT_LONGITUDE_KEY</string>
+    <string name="street_name">street_name</string>
+    <string name="is_user_blocked">is_user_blocked</string>
+    <string name="is_app_synced">is_app_synced</string>
+    <!--**************************************************************************************************-->
+
+
+    <!--*********************************** property keys ******************************************-->
+
+    <string name="property_base_url">base_url2</string>
+    <string name="property_dromain">dromain</string>
+    <string name="property_onesignal_app_id">onesignal_app_id</string>
+    <string name="MAPS_API_KEY">MAPS_API_KEY</string>
+    <string name="firebase_url">firebase_url</string>
+    <!--**************************************************************************************************-->
+
+
+    <!--Spinner Array-->
+    <string-array name="provinces">
+        <item>Select Province</item>
+        <item>Gauteng</item>
+        <item>Limpopo</item>
+        <item>Kwa Zulu Natal</item>
+        <item>Northern Cape</item>
+        <item>Western Cape</item>
+        <item>North West</item>
+        <item>Free State</item>
+        <item>Mpumalanga</item>
+        <item>Eastern Cape</item>
+    </string-array>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="forgot_password_not_underlined">Forgot Password</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Rhulani Chauke Mpho</string>
+    <string name="nav_header_subtitle">Mini Van</string>
+    <string name="nav_header_subtitle_1">CD 45 LP GP</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_booking">Booking</string>
+    <string name="menu_retail_bookings">Retail Bookings</string>
+    <string name="menu_scan">Scan POD</string>
+    <string name="menu_history">Booking</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_sdx">Skynet SDX</string>
+
+    <!--special Characters-->
+    <string name="specialCharacters">\'"[!@#$%*()_+=|?{}\\[\\]~-]</string>
+    <string name="title_activity_view_bucket_booking">ViewBucketBooking</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="whatsap_url">https://wa.me/</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="vehicle_make">Vehicle Make</string>
+    <string name="reg_number">Reg Number</string>
+    <string name="enter_reg_number">Enter Registration Number</string>
+    <string name="color">Color</string>
+    <string name="canopy">Canopy</string>
+    <string name="summary">Summary</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="amount_due">Amount Due</string>
+    <string name="r_00">R.00</string>
+    <string name="_7_sep_2023">7 Sep 2023</string>
+    <string name="next_payment">Next Payment</string>
+    <string name="r0_00">R0.00</string>
+    <string name="rhulani_chauke_mpho">Rhulani Chauke Mpho</string>
+    <string name="droppa_driver_owner">Droppa Driver/Owner</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="edit">Edit</string>
+    <string name="email">Email</string>
+    <string name="idNumber">ID Number</string>
+    <string name="rulani_droppa_com">rulani@droppa.com</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="_071_555_1144">071 555 1144</string>
+    <string name="completed_bookings">Completed bookings</string>
+    <string name="_250">250</string>
+    <string name="joined">Joined</string>
+    <string name="_15_june_2023">15 June 2023</string>
+    <string name="license_disk_information">License Disk Information</string>
+    <string name="attachments">Attachments</string>
+    <string name="pending">Pending</string>
+    <string name="_0">0</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
+    <string name="successful">Successful</string>
+    <string name="upload">Upload</string>
+    <string name="vehicle_information">Vehicle Information</string>
+    <string name="mini_van">Mini Van</string>
+    <string name="wbn_525_gp">WBN 525 GP</string>
+    <string name="white">white</string>
+    <string name="non">None</string>
+    <string name="total_bookings">Total Bookings</string>
+    <string name="switch_text">Switch</string>
+    <string name="password">password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="haven_t_registered_yet">Haven\'t registered yet?</string>
+    <string name="driver_activity">Driver Activity</string>
+    <string name="arrived_at_pick_up">Arrived at pick-up</string>
+    <string name="_08_00_am">08:00 AM</string>
+    <string name="multiple_pick_ups">Multiple Pick Ups</string>
+    <string name="pickup_time">Pickup Time</string>
+    <string name="send">Send</string>
+    <string name="upload_driver_s_license">Upload Driver\'s license</string>
+    <string name="upload_a_clear_image_of_your_valid_rsa_driver_s_license">Upload a clear image of your valid RSA drivers license.</string>
+    <string name="enter_your_vehicle_information_below">Enter your vehicle information below.</string>
+    <string name="welcome_to_the_droppa_driver_app">Welcome to the Droppa Driver App</string>
+    <string name="decide_where_when_and_how_you_want_to_earn">Decide where, when and how you want to earn.</string>
+    <string name="before_you_register_make_sure_that_you_meet_the_below_requirements">Before you register, make sure that you meet the below requirements.</string>
+    <string name="thank_you_for_choosing_to_partner_with_us_let_s_get_started">Thank you for choosing to partner with us. Let\'s get started.</string>
+    <string name="_1_you_have_a_valid_police_clearance">1. You have a valid police clearance.</string>
+    <string name="_3_your_vehicle_has_a_mileage_of_160_000km_or_less">3. Your vehicle has a mileage of 160 000km or less.</string>
+    <string name="_4_you_have_a_valid_driver_s_license_and_insurance_for_your_vehicle">4. You have a valid Driver\'s license and insurance for your vehicle.</string>
+    <string name="_2_you_posses_a_vehicle_that_was_manufactured_after_2012">2. You posses a vehicle that was manufactured after 2012.</string>
+    <string name="with_the_driver_app_you_can_see_all_future_and_past_bookings_manage_your_income_and_select_the_preferred_jobs_you_would_like">With the Driver app, you can see all future and past bookings, manage your income and select the preferred jobs you would like.</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="please_enter_the_one_time_password_that_has_been_sent_to_verify_your_account">Please enter the one-time password that has been sent to verify your account.</string>
+
+
+    <string name="app_package">co.za.skynet</string>
+    <!--============================SQLlite database keys ===============================-->
+    <string name="DB_NAME">DB_NAME</string>
+    <string name="COLLECTIONS">Collections</string>
+    <string name="DELIVERIES">Deliveries</string>
+    <string name="SQL_VERSION">SQL_VERSION</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_the_email_address_associated_with_your_account">Enter the email address associated with your account.</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="droppa_driver_app">Droppa Driver App</string>
+    <string name="upload_profile_picture">Upload Profile Picture</string>
+    <string name="issue_date">Issue Date</string>
+    <string name="license_number">License Number</string>
+    <string name="location">Location</string>
+    <string name="province">Province</string>
+    <string name="restrictions">Restrictions</string>
+    <string name="license_code">License Code</string>
+    <string name="mtn_group_of_companies">MTN Group of Companies</string>
+    <string name="contact_person">Contact Person</string>
+    <string name="pick_up_address">Pick Up Address</string>
+    <string name="instruction">Instruction</string>
+    <string name="customer_requirements">Customer Requirements</string>
+    <string name="appointment">Appointment</string>
+    <string name="date">Date:</string>
+    <string name="verify_client">Verify Client</string>
+    <string name="capture">Capture</string>
+    <string name="sign_on_screen">Sign On Screen</string>
+    <string name="done">Done</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="create_a_droppa_driver_account">Create a Droppa Driver Account</string>
+    <string name="create_a_free_account_or_sign_in_if_you_have_already_registered">Create a free account or sign in if you have already registered.</string>
+    <string name="volume">Volume</string>
+    <string name="penalties">Penalties</string>
+    <string name="expenses">Expenses</string>
+    <string name="revenue">Revenue</string>
+    <string name="drop_off_address">Drop Off Address</string>
+    <string name="system_error">Technical Error</string>
+    <string name="a_summary_of_your_completed_warehouse_collections_and_deliveries">A summary of your completed warehouse collections and deliveries.</string>
+    <string name="warehouse_collections">Warehouse Orders</string>
+    <string name="rates">Rates</string>
+    <string name="owner_consent">Owner consent</string>
+    <string name="report">Report</string>
+    <string name="security_alert">Security Alert</string>
+    <string name="start_trip">Start Trip</string>
+    <string name="attend_to_booking">Attend to booking</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="sub_total">Sub total</string>
+    <string name="submit_btn">Submit</string>
+    <string name="otp_subtitle">Please enter the one-time password that has been sent to verify your account.</string>
+    <string name="otp_heading">OTP Verification</string>
+
+    <string name="dropoff_notify_message">Droppa driver is now going to the Drop off to deliver your goods.</string>
+    <string name="dropoff_notify_title">Droppa DropOff Notification</string>
+    <string name="extra_data">extra_data</string>
+    <string name="techical_error_message">Have no worries, Our Technical team is already working on this issue at the moment.</string>
+    <string name="network_exception">Your device seem to have lost connection. Please verify if Your mobile data or wifi is enabled.</string>
+    <string name="Ts_Cs"><![CDATA[Terms & Conditions]]></string>
+    <string name="view_all"><u>View All</u></string>
+
+    <!--Backend statuses/messages-->
+    <string name="device_msg">Device or mobile number already used by another person</string>
+    <string name="account_msg">Account with id</string>
+    <string name="mobile_exist">Mobile number already used by another person</string>
+
+
+    <!--Important URL's-->
+    <string name="BaseUrl">http://88.99.94.84:8185</string>
+    <string name="vehicle_registration">Vehicle Registration</string>
+    <string name="sync_data">Sync Data</string>
+    <string name="home">Home</string>
+    <string name="gps">GPS:</string>
+    <string name="signal">Signal :</string>
+
+    <!--Financial -->
+    <string name="completed_collections_from_warehouse">Completed collections from warehouse.</string>
+    <string name="completed_deliveries_from_warehouse">Completed deliveries from warehouse.</string>
+    <string name="activities">Activities</string>
+    <string name="driver_consent">Driver consent</string>
+    <string name="all_collections_and_deliveries_completed_overall">All collections and deliveries completed overall</string>
+    <string name="total_waybills">Total Waybills</string>
+    <string name="today_s_debriefing">Today\'s Debriefing</string>
+    <string name="collections">Collections</string>
+    <string name="completed_collections_from_clients">Completed collections from clients</string>
+    <string name="deliveries">Deliveries</string>
+    <string name="amount_total">Amount Total</string>
+    <string name="total_cancelled_waybills">Total Cancelled Waybills</string>
+    <string name="all_collections_and_deliveries_overall">All collections and deliveries overall</string>
+    <string name="back_button">back button</string>
+    <string name="skynet_rates">Skynet Rates</string>
+    <string name="skynet_reports">Skynet Reports</string>
+    <string name="a_record_of_all_your_collections_made_this_month">A record of all your collections made this month.</string>
+    <string name="a_record_of_all_your_deliveries_made_this_month">A record of all your deliveries made this month.</string>
+    <string name="this_month">This month</string>
+    <string name="total_0">Total 0</string>
+    <string name="total_waybills_this_month">Total waybills this month</string>
+    <string name="r_00_00">R 0.0</string>
+    <string name="total_profit">Total Profit</string>
+    <string name="fuel_surcharge">Fuel Surcharge</string>
+    <string name="_0_">0 %</string>
+    <string name="description">Description</string>
+    <string name="amount">Amount</string>
+    <string name="total_expenses">Total Expenses</string>
+    <string name="total">Total %1$s</string>
+    <string name="branch_name">Branch Name</string>
+    <string name="route_name">Route Name</string>
+    <string name="branch">Branch</string>
+    <string name="rate_type">Rate type</string>
+    <string name="basic_amount">Basic Amount</string>
+    <string name="fixed_amount">Fixed Amount</string>
+    <string name="minimum_waybills">Minimum Waybills</string>
+    <string name="maximum_waybills">Maximum Waybills</string>
+    <string name="image_icon">image icon</string>
+    <string name="admin_fee">Admin Fee</string>
+    <string name="r650_00">R650.00</string>
+    <string name="rate">Rate</string>
+    <string name="waybills">Waybills</string>
+    <string name="route">Route</string>
+    <string name="r">R %1$s</string>
+    <string name="rate_structures">Rate Structures</string>
+    <string name="the_current_rates_agreed_upon_between_skynet_and_the_contract_owner">The current rates agreed upon between SKYNET and the contract owner</string>
+    <string name="failed_to_get_trip_summary">Failed to get trip summary</string>
+    <string name="network_error_occurred">Network error occurred</string>
+    <string name="failed_to_get_rates_structure">Failed to get rates structure</string>
+    <string name="enter_your_id_number_below_and_we_will_send_you_an_otp_to_verify_your_account">Enter your ID Number below and we will send you an OTP to verify your account</string>
+    <string name="id_number">ID Number</string>
+    <string name="otp_sent_to">OTP sent to:</string>
+    <string name="_072_502_9864">072 502 9864</string>
+    <string name="_hyphen">-</string>
+    <string name="verify">Verify</string>
+    <string name="did_not_receive_the_otp">Did not receive the OTP?</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="skynet_logo">Skynet Logo</string>
+    <string name="visit_www_skynet_co_za">Visit www.skynet.co.za</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="submit_new_password">Submit New Password</string>
+    <string name="password_reset">Password Reset</string>
+    <string name="account_verification">Account Verification</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="you_have_successfully_created_a_new_password_you_can_use_the_new_password_to_log_in_to_your_account">You have successfully created a new password. You can use the new password to log into your account.</string>
+    <string name="password_reset_success">Password Reset Success</string>
+    <string name="proceed">Proceed</string>
+    <string name="acknowledge_dialog">acknowledge_dialog</string>
+    <string name="failed_to_create_new_password">Failed to create new password</string>
+    <string name="confirm_exit">Confirm Exit</string>
+    <string name="you_are_almost_there_are_you_sure_you_want_to_cancel">You are almost there. Are you sure you want to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="confirm_dialog">confirm_dialog</string>
+    <string name="useraccountid">userAccountId</string>
+    <string name="otp">otp</string>
+    <string name="message">message</string>
+    <string name="failed_to_verify_otp">Failed to verify OTP</string>
+    <string name="update_now">Update Now</string>
+    <string name="update">Update</string>
+    <string name="we_ve_added_exciting_new_features_and_improvements_update_now_for_the_best_experience">We\'ve added exciting new features and improvements! Update now for the best experience.</string>
+    <string name="this_version_of_the_app_is_no_longer_supported_please_update_to_continue">This version of the app is no longer supported. Please update to continue.</string>
+    <string name="important_update_required">Important Update Required</string>
+    <string name="new_version_available">New Version Available</string>
+    <string name="cancel">Cancel</string>
+    <string name="remind_me_later">Remind Me Later</string>
+    <string name="open_play_store_to_update">Open Play-store to update</string>
+    <string name="https_play_google_com_store">https://play.google.com/store/apps/details?id=co.za.droppa</string>
+    <string name="app_version_text">v %1$s</string>
+    <string name="sign_out">Sign out</string>
+    <string name="selected_vehicle">selected_vehicle</string>
+    <string name="first_login">First Login</string>
+    <string name="you_are_logging_in_for_the_first_time_please_reset_your_password_to_continue">You are logging in for the first time, Please reset your password to continue</string>
+    <string name="successful_waybills">Successful Waybills</string>
+    <string name="failed_waybills">Failed Waybills</string>
+    <string name="name">Name</string>
+    <string name="profile_icon">Profile icon</string>
+    <string name="email_icon">email icon</string>
+    <string name="contact_number_icon">Contact number icon</string>
+    <string name="vehicle_model">Vehicle Model</string>
+    <string name="vin_number">Vin Number</string>
+    <string name="name_information">%1$s %2$s</string>
+    <string name="app_version">App Version</string>
+    <string name="app_information">App Information</string>
+    <string name="sync_needed">Sync Needed</string>
+    <string name="delivered_parcels">Delivered Parcels</string>
+    <string name="parcel_id">Parcel ID</string>
+    <string name="successful_deliveries">Successful Deliveries</string>
+    <string name="failed_deliveries">Failed Deliveries</string>
+    <string name="synced">Synced</string>
+    <string name="syncing">Syncing</string>
+    <string name="sync_complete">Sync Complete</string>
+    <string name="please_confirm_this_action_by_clicking_exit_or_stay_to_remain">Please confirm this action by clicking exit or stay\n</string>
+    <string name="exiting_app">Exiting app</string>
+    <string name="stay">Stay</string>
+    <string name="exit">Exit</string>
+    <string name="mark_total">%1$s / %2$s</string>
+    <string name="you_cannot_leave_this_screen_because_some_parcel_s_have_already_been_scanned_please_unscan_the_parcel_s_first">You cannot leave this screen because some parcel(s) have already been scanned.\n\nPlease unscan the parcel(s) first.</string>
+    <string name="exit_blocked">Exit Blocked</string>
+    <string name="ok">OK</string>
+    <string name="exit_confirmation">Exit Confirmation</string>
+    <string name="would_you_like_to_fail_the_waybill_for_parcel_number">Would you like to fail the waybill for parcel number: %1$s</string>
+    <string name="would_you_like_to_scan_back_the_parcel">Would you like to scan back the parcel </string>
+    <string name="fail_waybill">Fail Waybill</string>
+    <string name="scan_back_parcel">Scan Back Parcel</string>
+    <string name="select_delivery_issue">Select Delivery Issue</string>
+    <string name="please_wait_a_moment_while_we_get_everything_ready">Please wait a moment while we get everything ready for you.</string>
+    <string name="re_sync">Re-Sync</string>
+    <string name="sync_failed">Sync Failed</string>
+    <string name="trip_number">Trip No: %1$s</string>
+    <string name="manifest_waybills">Waybills: %1$s</string>
+    <string name="manifest_parcels">Parcels: %1$s</string>
+    <string name="list_of_manifests">List Of Manifests</string>
+    <string name="sync">Sync</string>
+    <string name="clear">Clear</string>
+    <string name="apply_signature">Apply Signature</string>
+    <string name="receiver_name">Receiver Name</string>
+    <string name="back">Back</string>
+    <string name="submit">Submit</string>
+    <string name="no_password_entered">No password entered</string>
+    <string name="assign">Assign</string>
+    <string name="search">Search</string>
+    <string name="disabled">Disabled</string>
+    <string name="enabled">Enabled</string>
+    <string name="gps_is_enabled">GPS is enabled</string>
+    <string name="gps_is_disabled">GPS is Disabled</string>
+    <string name="totaled">Total : %1$s / %2$s</string>
+    <string name="delivery_issue_dialog">delivery_issue_dialog</string>
+    <string name="no_internet_delivery_failure_saved_offline">No Internet. Delivery failure saved offline.</string>
+    <string name="delivery_failure">DELIVERY_FAILURE</string>
+    <string name="select_parcel_issue">Select Parcel Issue</string>
+    <string name="signature_display">signature display</string>
+    <string name="status">Status:</string>
+    <string name="accounts">Accounts</string>
+    <string name="financials">Financials</string>
+    <string name="accounts_icon">accounts icon</string>
+    <string name="financial_icon">Financial icon</string>
+    <string name="sync_icon">Sync Icon</string>
+    <string name="home_icon">Home Icon</string>
+    <string name="connection_indicator_icon">Connection Indicator Icon</string>
+    <string name="allocated_collection">Allocated Collection</string>
+    <string name="allocated_deliveries">Allocated Deliveries</string>
+    <string name="successful_collection">Successful Collection</string>
+    <string name="history">History</string>
+    <string name="failed_collection">Failed Collection</string>
+    <string name="re_try">Re Try</string>
+    <string name="waybill_number">Waybill Number:</string>
+    <string name="service_type">Service Type</string>
+    <string name="location_icon">Location Icon</string>
+    <string name="store_name">Store name</string>
+    <string name="fail_delivery">Fail Delivery</string>
+    <string name="no_manifest_found_at_the_moment_please_check_back_later">No manifests found at the moment, \n please check back later.</string>
+    <string name="grv_grv_number">GRV - GRV Number</string>
+    <string name="otp_caps">OTP</string>
+    <string name="id_passport">ID/PASSPORT</string>
+    <string name="proof_of_residence">Proof of Residence</string>
+    <string name="id_copy_physical">ID Copy - Physical</string>
+    <string name="inv_signed_invoice">INV - Signed Invoice</string>
+    <string name="bin">BIN</string>
+    <string name="seal">SEAL</string>
+    <string name="grvd">GRVD</string>
+    <string name="signed_contract">Signed Contract</string>
+    <string name="cdn">CDN</string>
+    <string name="scan_parcels">Scan Parcels</string>
+    <string name="add_waybill">Add Waybill</string>
+    <string name="sign_on_glass">Sign On Glass</string>
+    <string name="reference">Reference</string>
+    <string name="parcels">Parcels</string>
+    <string name="date_">Date:</string>
+    <string name="consignee_name">Consignee Name</string>
+    <string name="action_delivery">Action Delivery</string>
+    <string name="consignee_address">Consignee Address</string>
+    <string name="pickup_address">Pickup Address</string>
+    <string name="time">Time</string>
+    <string name="consignee_contact">Consignee Contact</string>
+    <string name="consignee_phone_no">Consignee Phone No.</string>
+    <string name="total_">Total</string>
+    <string name="add_manually">Add Manually</string>
+    <string name="scanned_tick">Scanned tick</string>
+    <string name="bast">BAST</string>
+    <string name="mark_all_as_scanned">Mark all as scanned</string>
+    <string name="scan_to_search_for_a_waybill">Scan to search for a waybill</string>
+    <string name="scan_to_search">Scan to search</string>
+    <string name="start_deliveries">Start Deliveries</string>
+    <string name="no_waybills_found">No waybills found</string>
+    <string name="title_place_holder">Title Place Holder</string>
+
+</resources>

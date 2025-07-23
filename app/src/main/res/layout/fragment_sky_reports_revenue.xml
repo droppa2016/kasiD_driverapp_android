@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical"
+    tools:context=".fragments.SkyNetReportsRevenueFragment">
+
+    <!--Summary-->
+    <LinearLayout
+        android:id="@+id/lytSummery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_summery_background"
+        android:elevation="@dimen/component_spacing_20dp"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/component_spacing_10dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_10dp">
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewSubHeading"
+                    android:layout_marginStart="@dimen/component_spacing_5dp"
+                    android:layout_marginEnd="@dimen/component_spacing_20dp"
+                    android:layout_weight="1"
+                    android:text="@string/revenue"
+                    android:textColor="@color/quantum_white_100" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/revenueText"
+                    style="@style/TextViewSubHeading"
+                    android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                    android:text="@string/r_00_00"
+                    android:textColor="@color/quantum_white_100" />
+            </TableRow>
+        </TableLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+            android:background="@color/quantum_white_100" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_10dp">
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewSubHeading"
+                    android:layout_marginStart="@dimen/component_spacing_5dp"
+                    android:layout_marginEnd="@dimen/component_spacing_20dp"
+                    android:layout_weight="1"
+                    android:text="@string/expenses"
+                    android:textColor="@color/quantum_white_100" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/expensesText"
+                    style="@style/TextViewSubHeading"
+                    android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                    android:text="@string/r_00_00"
+                    android:textColor="@color/quantum_white_100" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/adminFeeHeading"
+                    style="@style/TextViewSubHeading"
+                    android:layout_marginStart="@dimen/component_spacing_4dp"
+                    android:layout_marginEnd="@dimen/component_spacing_20dp"
+                    android:layout_weight="1"
+                    android:text="@string/admin_fee"
+                    android:textColor="@color/quantum_white_100" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/adminFeeText"
+                    style="@style/TextViewSubHeading"
+                    android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                    android:text="@string/r_00_00"
+                    android:textColor="@color/quantum_white_100" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+            android:layout_marginTop="@dimen/component_spacing_5dp">
+
+            <TableRow tools:ignore="UselessParent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginStart="@dimen/component_spacing_5dp"
+                    android:layout_marginEnd="@dimen/component_spacing_20dp"
+                    android:layout_weight="1"
+                    style="@style/TextViewRecyclerViewHeading"
+                    android:text="@string/total_profit"
+                    android:textColor="@color/quantum_white_100"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/totalProfitText"
+                    style="@style/TextViewRecyclerViewHeading"
+                    android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                    android:text="@string/r_00_00"
+                    android:textColor="@color/quantum_white_100"
+                    android:textSize="14sp" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTrips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lytSummery"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" />
+
+</RelativeLayout>

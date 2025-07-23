@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+        <include layout="@layout/custon_action_bar"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/component_spacing_25dp"
+        android:src="@drawable/otp_verification_icon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextAppearance.MaterialComponents.Headline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP Verification"
+        android:textColor="@color/skynet_color"
+        android:textSize="@dimen/large_title_font_size"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/segoe_ui"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+        android:maxLines="2"
+        android:paddingHorizontal="@dimen/standard_spacing"
+        android:text="Enter the OTP number that was given to you by the customer."
+        android:textColor="@color/grey_text"
+        android:textSize="@dimen/regular_font_size" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/component_spacing_20dp"
+        android:padding="2dp"
+        android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+        android:background="@drawable/text_background">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtClientNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnGetOTP"
+            android:background="@drawable/text_background_no_border"
+            android:drawableLeft="@drawable/phone_icon_registration"
+            android:drawablePadding="7dp"
+            android:fontFamily="@font/segoe_ui"
+            android:hint="Phone number"
+            android:gravity="center_vertical"
+            android:focusable="false"
+            android:inputType="textWebEmailAddress"
+            android:paddingLeft="10dp"
+            android:textColor="@color/grey_text"
+            android:textColorHint="@color/light_grey"
+            android:textSize="@dimen/regular_font_size"
+            android:textStyle="bold"
+            app:textInputLayoutFocusedRectEnabled="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGetOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_background"
+            android:paddingHorizontal="@dimen/component_spacing_15dp"
+            android:text="Get OTP"
+            android:layout_marginRight="3dp"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+        app:cardCornerRadius="@dimen/component_spacing_15dp"
+        android:backgroundTint="@color/card_background"
+        android:layout_marginTop="@dimen/component_spacing_15dp"
+        app:contentPadding="@dimen/component_spacing_15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.MaterialComponents.Headline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvcurrentNumber"
+                android:textColor="@color/skynet_color"
+                android:textSize="@dimen/title_font_size"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otpBlock1"
+                    android:layout_width="45dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="7dp"
+                    android:background="@drawable/otp_block_background"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:hint="-"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="@dimen/large_text_font_size" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otpBlock2"
+                    android:layout_width="45dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="7dp"
+                    android:background="@drawable/otp_block_background"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:hint="-"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="@dimen/large_text_font_size" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otpBlock3"
+                    android:layout_width="45dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="7dp"
+                    android:background="@drawable/otp_block_background"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:hint="-"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="@dimen/large_text_font_size" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otpBlock4"
+                    android:layout_width="45dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/otp_block_background"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:hint="-"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="@dimen/large_text_font_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_15dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="center"
+                    android:paddingHorizontal="15dp"
+                    android:text="If the code is deleye for too long, please confirm the cellphone number or contact our support team."
+                    android:textColor="@color/grey_text"
+                    android:textSize="@dimen/regular_font_size" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtResendOTP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:text="Resend OTP"
+                    android:textColor="@color/skynet_color"
+                    android:textSize="@dimen/sub_title_font_size"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVerifyAccount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/min_button_height"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="@dimen/component_spacing_20dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="Verify"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

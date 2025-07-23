@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_access_nav_graph"
+    app:startDestination="@id/skyNetSignInFragment">
+    <fragment
+        android:id="@+id/skyNetSignInFragment"
+        android:name="co.za.kasi.fragments.SkyNetSignInFragment"
+        android:label="fragment_sky_net_sign_in"
+        tools:layout="@layout/fragment_sky_net_sign_in">
+        <action
+            android:id="@+id/action_skyNetSignInFragment_to_skyNetForgotPasswordFragment"
+            app:destination="@id/skyNetForgotPasswordFragment" />
+        <action
+            android:id="@+id/action_skyNetSignInFragment_to_skyNetPasswordResetFragment"
+            app:destination="@id/skyNetPasswordResetFragment" />
+        <action
+            android:id="@+id/action_skyNetSignInFragment_to_skyNetPasswordResetFragment2"
+            app:destination="@id/skyNetPasswordResetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/skyNetForgotPasswordFragment"
+        android:name="co.za.kasi.fragments.SkyNetForgotPasswordFragment"
+        android:label="fragment_sky_net_forgot_password"
+        tools:layout="@layout/fragment_sky_net_forgot_password">
+        <action
+            android:id="@+id/action_skyNetForgotPasswordFragment_to_skyNetOtpVerificationFragment"
+            app:destination="@id/skyNetOtpVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/skyNetOtpVerificationFragment"
+        android:name="co.za.kasi.fragments.SkyNetOtpVerificationFragment"
+        android:label="fragment_sky_net_otp_verification"
+        tools:layout="@layout/fragment_sky_net_otp_verification">
+        <action
+            android:id="@+id/action_skyNetOtpVerificationFragment_to_skyNetPasswordResetFragment"
+            app:destination="@id/skyNetPasswordResetFragment" />
+        <argument
+            android:name="userAccountId"
+            app:argType="string" />
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/skyNetPasswordResetFragment"
+        android:name="co.za.kasi.fragments.SkyNetPasswordResetFragment"
+        android:label="fragment_sky_net_password_reset"
+        tools:layout="@layout/fragment_sky_net_password_reset">
+        <action
+            android:id="@+id/action_skyNetPasswordResetFragment_to_skyNetSignInFragment"
+            app:destination="@id/skyNetSignInFragment" />
+        <argument
+            android:name="userAccountId"
+            app:argType="string" />
+        <argument
+            android:name="otp"
+            app:argType="string" />
+    </fragment>
+</navigation>

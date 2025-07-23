@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <include layout="@layout/custon_action_bar" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".7"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <RelativeLayout
+                android:id="@+id/surfaceBackGround"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="@dimen/component_spacing_25dp"
+                android:orientation="vertical"
+                android:padding="1.5dp">
+
+                <co.za.kasi.utils.DocumentSurfaceView
+                    android:id="@+id/cameraSurfaceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="scanning.json"
+                    app:lottie_loop="true" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lytonPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/component_spacing_25dp"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnRetry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginHorizontal="@dimen/component_spacing_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_background_red_borders"
+                        android:text="Retry"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginHorizontal="@dimen/component_spacing_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_background"
+                        android:text="Upload"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdCaptureParcel"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/component_spacing_25dp"
+                    android:backgroundTint="@color/card_background"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="0dp"
+                    app:contentPadding="@dimen/component_spacing_3dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/baseline_camera_24" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crdFailedStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+                android:layout_marginBottom="@dimen/component_spacing_25dp"
+                android:backgroundTint="@color/skynet_red"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/component_spacing_25dp"
+                app:contentPadding="@dimen/component_spacing_15dp">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/segoe_ui"
+                    android:padding="5dp"
+                    android:text="Invalid track number"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sub_title_font_size"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crdSuccessfull"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+                android:layout_marginBottom="@dimen/component_spacing_25dp"
+                android:backgroundTint="@color/card_background"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/component_spacing_15dp"
+                app:contentPadding="@dimen/component_spacing_15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/segoe_ui"
+                            android:padding="5dp"
+                            android:text="Client :"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtClientNames"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/segoe_ui"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/segoe_ui"
+                            android:padding="5dp"
+                            android:text="Track Number :"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtTrackNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/segoe_ui"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"
+                        android:background="@drawable/button_background"
+                        android:text="Retry"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:id="@+id/crdCaptureParcel"-->
+        <!--            android:layout_width="50dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginBottom="@dimen/component_spacing_25dp"-->
+        <!--            android:backgroundTint="@android:color/transparent"-->
+        <!--            app:cardCornerRadius="50dp"-->
+        <!--            app:cardElevation="0dp">-->
+
+        <!--            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:src="@drawable/baseline_camera_24" />-->
+        <!--        </androidx.cardview.widget.CardView>-->
+    </RelativeLayout>
+
+</LinearLayout>

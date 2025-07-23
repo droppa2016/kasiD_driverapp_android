@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinancialDashBoardActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/skynet_red"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="4dp"
+            tools:ignore="RtlSymmetry">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="start"
+                android:contentDescription="@string/back_button"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/customTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_font_size"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap"
+                tools:text="Skynet Rates Title" />
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <androidx.cardview.widget.CardView
+            android:elevation="@dimen/component_spacing_20dp"
+            android:id="@+id/tabSelectionArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:elevation="@dimen/component_spacing_25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@color/card_background"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:id="@+id/volumeArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/component_spacing_5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgVolume"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/volume" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVolume"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/volume"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingVertical="@dimen/component_spacing_5dp"
+                    android:id="@+id/revenueArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgRevenue"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/dashboard_revenue_icon" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRevenue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/revenue"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey_text"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expensesArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/component_spacing_5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgExpenses"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/expenses" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvExpenses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/expenses"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey_text"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- FragmentContainerView for NavHost -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/financial_nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabSelectionArea"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/financial_dashboard_nav_graph" />
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

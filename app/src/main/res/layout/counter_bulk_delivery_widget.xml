@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/component_spacing_4dp"
+    android:paddingHorizontal="@dimen/component_spacing_30dp"
+    android:paddingVertical="@dimen/component_spacing_10dp"
+    android:backgroundTint="@color/card_background"
+    app:contentPadding="@dimen/component_spacing_15dp"
+    app:cardCornerRadius="@dimen/component_spacing_15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/booking_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/red_attend_booking_icon" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/heading_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/booking_icon"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/segoe_ui"
+            android:maxLines="1"
+            android:text="Bulk Counter Delivery"
+            android:textAllCaps="false"
+            android:layout_marginBottom="@dimen/component_spacing_10dp"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sub_title_font_size"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading_title"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center"
+            android:text="Start Receiving, attending and managing your reserved bookings."
+            android:textAllCaps="false"
+            android:textColor="@color/grey_text"
+            android:textSize="@dimen/regular_font_size"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/main_text"
+            android:layout_marginTop="@dimen/component_spacing_7dp"
+            android:id="@+id/btnCancelBulkDelivery"
+            android:background="@drawable/button_background_red_borders"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/red"
+            android:textSize="@dimen/regular_font_size"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/btnCancelBulkDelivery"
+            android:layout_marginTop="@dimen/component_spacing_7dp"
+            android:id="@+id/btnBulkDelivery"
+            android:background="@drawable/switch_button_background"
+            android:fontFamily="@font/segoe_ui"
+            android:gravity="center"
+            android:text="Counter Delivery"
+            android:textColor="@color/white"
+            android:textSize="@dimen/regular_font_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

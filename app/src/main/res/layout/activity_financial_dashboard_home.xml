@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_smoke"
+    android:orientation="vertical"
+    tools:context=".FinancialDashboardHome">
+
+
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/selectionArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/component_spacing_15dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:layout_marginBottom="@dimen/component_spacing_5dp"
+                    android:backgroundTint="@color/card_background"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/component_spacing_15dp"
+                    app:contentPadding="@dimen/component_spacing_7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="5dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/component_spacing_25dp"
+                            android:layout_height="@dimen/component_spacing_25dp"
+                            android:src="@drawable/dashboard_warehouse_collection_icon" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="@string/total_waybills"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoe_ui"
+                            android:text="@string/a_summary_of_your_completed_warehouse_collections_and_deliveries"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTotalSkynetBooking"
+                            style="@style/TextAppearance.MaterialComponents.Headline3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="900"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/_0"
+                            android:textColor="@color/black"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdViewCollections"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:layout_marginBottom="@dimen/component_spacing_3dp"
+                    android:backgroundTint="@color/card_background"
+                    app:cardCornerRadius="15dp"
+                    app:contentPadding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/dashboard_blue_collections_icon" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewRecyclerViewHeading"
+                                android:text="@string/collections" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:text="@string/allocated_collection"
+                                android:textColor="@color/grey_text" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/blue_box" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvReservedCollection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginHorizontal="7dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/_0"
+                                android:textColor="@color/dark_blue"
+                                android:textSize="24sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdViewDeliveries"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="@dimen/component_spacing_3dp"
+                    android:backgroundTint="@color/card_background"
+                    app:cardCornerRadius="15dp"
+                    app:contentPadding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/dashboard_red_deliveries_icon" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewRecyclerViewHeading"
+                                android:text="@string/deliveries" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewDescription"
+                                android:text="@string/allocated_deliveries"
+                                android:textColor="@color/grey_text" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/red_box" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvNumDeliveries"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginHorizontal="7dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/_0"
+                                android:textColor="@color/skynet_red"
+                                android:textSize="24sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/component_spacing_5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crdfailedDeliveries"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/card_background"
+                        app:cardCornerRadius="15dp"
+                        app:contentPadding="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewRecyclerViewHeading"
+                                    android:text="@string/failed_deliveries" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFailedDeliveries"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginHorizontal="7dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/_0"
+                                    android:textColor="@color/skynet_red"
+                                    android:textSize="24sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crdfailedCollections"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/card_background"
+                        app:cardCornerRadius="15dp"
+                        app:contentPadding="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewRecyclerViewHeading"
+                                    android:text="@string/failed_collection" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFailedCollections"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginHorizontal="7dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/_0"
+                                    android:textColor="@color/skynet_red"
+                                    android:textSize="24sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/component_spacing_5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crdSuccessfulDeliveries"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/card_background"
+                        app:cardCornerRadius="15dp"
+                        app:contentPadding="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewRecyclerViewHeading"
+                                    android:text="@string/successful_deliveries"
+                                    android:textColor="@color/green" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSuccessfulDeliveries"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginHorizontal="7dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/_0"
+                                    android:textColor="@color/black"
+                                    android:textSize="24sp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crdSuccessfulCollections"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/card_background"
+                        app:cardCornerRadius="15dp"
+                        app:contentPadding="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewRecyclerViewHeading"
+                                    android:text="@string/successful_collection"
+                                    android:textColor="@color/green" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSuccessfulCollections"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginHorizontal="7dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/_0"
+                                    android:textColor="@color/black"
+                                    android:textSize="24sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!--            34567890-->
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/syncArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="@dimen/component_spacing_10dp"
+                android:backgroundTint="@color/card_background"
+                app:cardCornerRadius="15dp"
+                app:contentPadding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/syncNotifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/component_spacing_5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/progress_title"
+                        style="@style/TextViewRecyclerViewHeading"
+                        android:text="@string/sync_needed" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/progress_title"
+                        android:layout_marginTop="9dp"
+                        android:layout_toStartOf="@id/progress_indicator_text"
+                        android:maxHeight="@dimen/component_spacing_30dp"
+                        android:minHeight="@dimen/component_spacing_20dp"
+                        android:progress="67"
+                        android:progressDrawable="@drawable/progress_background"
+                        android:scaleY="0.8" />
+
+                    <TextView
+                        android:id="@+id/progress_indicator_text"
+                        style="@style/TextViewSubHeading"
+                        android:layout_below="@id/progress_title"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="@dimen/component_spacing_10dp"
+                        android:layout_marginStart="16dp"
+                        android:text="31/45" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/component_spacing_15dp"
+        android:layout_weight="1.4"
+        android:background="@drawable/layout_shape"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/component_spacing_7dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_25dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Activities"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdRateCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/card_background"
+                    android:clickable="false"
+                    android:visibility="gone"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:contentPadding="15dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/ratesLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/rates"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/dashboard_rates__wallet_money_icon" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="7dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="@string/rates"
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="7dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="@string/owner_consent"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdReportCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/card_background"
+                    android:clickable="false"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:contentPadding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:scaleType="center"
+                            android:src="@drawable/dashboard_report_icon" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="7dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="@string/history"
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="7dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="@string/owner_consent"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdPenaltiesCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@color/card_background"
+                    android:clickable="true"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:contentPadding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:scaleType="center"
+                            android:src="@drawable/dashboard_penalties_icon" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="7dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="@string/penalties"
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="7dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:text="@string/driver_consent"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

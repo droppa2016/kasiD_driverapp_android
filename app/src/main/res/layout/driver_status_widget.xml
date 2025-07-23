@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/standard_spacing"
+    android:layout_marginTop="@dimen/component_spacing_25dp"
+    android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+    android:backgroundTint="@color/card_background"
+    app:contentPadding="@dimen/component_spacing_10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/driver_status_imgProfile"
+            android:src="@drawable/avator2"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/component_spacing_10dp"
+            android:orientation="vertical">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoe_ui"
+                style="@style/TextAppearance.MaterialComponents.Headline1"
+                android:textSize="@dimen/sub_title_font_size"
+                android:id="@+id/txtDriverNames"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/segoe_ui"
+                    style="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold"
+                    android:id="@+id/txtVehicleType"
+                    android:textColor="@color/grey_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginHorizontal="@dimen/component_spacing_20dp"
+                    android:id="@+id/txtVehicleRegistration"
+                    android:fontFamily="@font/segoe_ui"
+                    android:visibility="gone"
+                    style="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:drawablePadding="@dimen/component_spacing_5dp"
+            android:paddingHorizontal="@dimen/component_spacing_7dp"
+            android:gravity="center"
+            android:id="@+id/txtStatusChange"
+            android:fontFamily="@font/segoe_ui"
+            style="@style/TextAppearance.MaterialComponents.Headline1"
+            android:textSize="@dimen/regular_font_size"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

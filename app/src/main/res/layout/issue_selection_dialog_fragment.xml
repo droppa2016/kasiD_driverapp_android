@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/component_spacing_5dp"
+    android:backgroundTint="@color/card_background"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/component_spacing_15dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/component_spacing_5dp"
+        android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+        android:layout_marginBottom="@dimen/component_spacing_15dp"
+        app:cardCornerRadius="@dimen/component_spacing_15dp"
+        app:contentPadding="@dimen/component_spacing_15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewHeading"
+                android:layout_alignParentTop="true"
+                android:id="@+id/titleText"
+                tools:text="Select Delivery Issue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:layout_below="@id/titleText"
+                android:id="@+id/issueListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/optionButtonsSection"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="0.005dp" />
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:id="@+id/optionButtonsSection"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/component_spacing_40dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="@dimen/component_spacing_15dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNegative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background_red_borders"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/skynet_red"
+                    android:textSize="12sp"
+                    tools:text="No" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPositive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:layout_marginStart="@dimen/component_spacing_10dp"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    tools:text="Yes" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

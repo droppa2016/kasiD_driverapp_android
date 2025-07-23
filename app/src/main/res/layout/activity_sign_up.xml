@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <include layout="@layout/background_splash_gradient" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/white_card"
+        android:elevation="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnCreateAccount"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/lytBottomCard"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/unauthorized_header_component" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="5dp"
+                        android:paddingBottom="17dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/nameText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_10dp"
+                            android:background="@drawable/text_background"
+                            android:digits="qwertyuioplkjhgfdsazxcvbnm QWERTYUIOPLKJHGFDSAZXCVBNM"
+                            android:drawableLeft="@drawable/outline_person_24"
+                            android:drawablePadding="7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="Names"
+                            android:imeOptions="actionNext"
+                            android:inputType="textAutoComplete"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/grey_text"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtSurnameText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_10dp"
+                            android:background="@drawable/text_background"
+                            android:digits="qwertyuioplkjhgfdsazxcvbnm QWERTYUIOPLKJHGFDSAZXCVBNM"
+                            android:drawableLeft="@drawable/outline_account_circle_24"
+                            android:drawablePadding="7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="Surname"
+                            android:imeOptions="actionNext"
+                            android:inputType="textAutoComplete"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/grey_text"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtEmailText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_10dp"
+                            android:background="@drawable/text_background"
+                            android:digits="qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM @0123456789-._+~"
+                            android:drawableLeft="@drawable/outline_email_24"
+                            android:drawablePadding="7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="Email"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/grey_text"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtPhoneNumberText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_10dp"
+                            android:background="@drawable/text_background"
+                            android:digits="0123456789 +()"
+                            android:drawableLeft="@drawable/outline_phone_24"
+                            android:drawablePadding="7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="Phone Number"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/grey_text"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_10dp"
+                            android:background="@drawable/text_background"
+                            android:drawableLeft="@drawable/outline_lock_24"
+                            android:drawablePadding="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="password"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/grey_text"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtRePassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_10dp"
+                            android:background="@drawable/text_background"
+                            android:drawableLeft="@drawable/outline_lock_24"
+                            android:drawablePadding="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="Re-password"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/grey_text"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                        <!--<androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnCreateAccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/button_height"
+                            android:layout_marginTop="@dimen/component_spacing_10dp"
+                            android:background="@drawable/button_background"
+                            android:text="Sign Up"
+                            android:textColor="@color/white" />-->
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCreateAccount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_above="@id/lytBottomCard"
+                android:layout_marginTop="@dimen/component_spacing_10dp"
+                android:background="@drawable/button_background"
+                android:text="Sign Up"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/lytBottomCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/component_spacing_15dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="7dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="7dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|bottom"
+                        android:text="Already have an Account?"
+                        android:textColor="#94000000"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/btnSIgnIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|bottom"
+                        android:text="Sign In"
+                        android:textColor="@color/skynet_color"
+                        android:textSize="@dimen/sub_title_font_size" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

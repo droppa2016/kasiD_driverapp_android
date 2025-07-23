@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/driver_status_widget" />
+
+        <include layout="@layout/upcoming_booking_widget" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtNewBookingsLable"
+                android:padding="@dimen/standard_spacing">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieFindBookings"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="blinking.json"
+                    app:lottie_loop="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:visibility="gone"
+                            android:background="@drawable/alert_bachgroount"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="@dimen/component_spacing_15dp"
+                            android:text="New Booking"
+                            android:id="@+id/txtNewBookings"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sub_title_font_size"
+                            android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/skynet_color"
+                        app:cardCornerRadius="65dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="8dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/outline_notification_bell" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txtNewBookingsCount"
+                                style="@style/TextAppearance.MaterialComponents.Headline1"
+                                android:layout_width="10dp"
+                                android:layout_height="@dimen/component_spacing_10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="8.5dp"
+                                android:layout_marginRight="9.3dp"
+                                android:background="@drawable/notification_betch"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textFontWeight="600"
+                                android:textColor="@color/white"
+                                android:textSize="8sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/component_spacing_15dp"
+                android:id="@+id/crdMyLocation"
+                android:backgroundTint="@color/card_background"
+                app:cardCornerRadius="40dp"
+                app:contentPadding="@dimen/component_spacing_7dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/baseline_my_location_24" />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSeeAvailabeBookings"
+            style="@style/TextAppearance.MaterialComponents.Headline1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+            android:layout_marginBottom="@dimen/component_spacing_20dp"
+            android:background="@drawable/button_style_10dp"
+            android:drawableLeft="@drawable/route_icon_available_bookings_butoon"
+            android:fontFamily="@font/segoe_ui"
+            android:paddingHorizontal="15dp"
+            android:text="Available booking"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sub_title_font_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/component_spacing_25dp"
+        android:visibility="gone">
+
+        <include layout="@layout/attend_booking_widget" />
+
+        <include layout="@layout/financial_dashboard_widget" />
+    </LinearLayout>
+</RelativeLayout>

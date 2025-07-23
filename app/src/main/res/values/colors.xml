@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red">#FF8E18</color>
+    <color name="skynet_color">#FF8E18</color>
+    <color name="skynet_red">#FF8E18</color>
+    <color name="skynet_blue">#0399D1</color>
+    <color name="snackbar_red">#AF050D</color>
+    <color name="snackbar_blue">#2196F3</color>
+    <color name="snackbar_green">#16A10C</color>
+    <color name="card_background">#F9F9F9</color>
+    <color name="light_grey">#D9D9D9</color>
+    <color name="grey_text">#646363</color>
+    <color name="grey_text1">#818181</color>
+    <color name="grey_card">#292D32</color>
+    <color name="green">#32D617</color>
+    <color name="grey_line">#D0D0D0</color>
+    <color name="dark_blue">#042634</color>
+    <color name="black">#FF000000</color>
+    <color name="quantum_black_100">#FF000000</color>
+    <color name="background">#EAEAEA</color>
+    <color name="light_blue">#D0E9F3</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="quantum_white_100">#FFFFFFFF</color>
+    <color name="white_smoke">#EBEBEB</color>
+    <color name="app_background">#EBEBEB</color>
+    <color name="white_cream">#DEDEDE</color>
+    <color name="gray_text_hint">#40000000</color>
+    <color name="grey_summery_background">#292D32</color>
+    <color name="gray_darker1">#686868</color>
+    <color name="gray_darker">#545454</color>
+    <color name="rateBackground_blue">#E7F5FB</color>
+    <color name="light_green">#E7F5FB</color>
+    <color name="red_dark">#E7F5FB</color>
+    <color name="white_shadow">#E7F5FB</color>
+    <color name="light_grey_header">#E6E6E6</color>
+</resources>

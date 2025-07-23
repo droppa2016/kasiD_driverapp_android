@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ViewBucketBooking">
+
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/top_corner_radius">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/standard_spacing"
+                android:paddingVertical="@dimen/component_spacing_25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:visibility="gone"
+                        android:src="@drawable/alarm_clock_icon_upcoming_booking_card" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="Waybill Number"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:id="@+id/tvWaybillNumber"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/sub_title_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/grey_view_component"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/component_spacing_10dp"
+                        android:layout_marginBottom="@dimen/component_spacing_10dp"
+                        android:layout_marginTop="@dimen/component_spacing_10dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="Service Type"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:id="@+id/tvServiceType"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/sub_title_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/grey_view_component"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/component_spacing_10dp"
+                        android:layout_marginBottom="@dimen/component_spacing_10dp"
+                        android:layout_marginTop="@dimen/component_spacing_10dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="Consignee Name"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:id="@+id/tvCompanyName"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/sub_title_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/grey_view_component"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/component_spacing_10dp"
+                        android:layout_marginBottom="@dimen/component_spacing_10dp"
+                        android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:maxLines="1"
+                                android:text="Consignee Phone No."
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:textColor="@color/grey_text"
+                                android:textSize="@dimen/regular_font_size" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextAppearance.MaterialComponents.Headline1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/component_spacing_3dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:maxLines="1"
+                                android:id="@+id/tvPhoneNo"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:textColor="@color/black"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/sub_title_font_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lytContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:maxLines="1"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:text="Consignee Contact"
+                                android:textColor="@color/grey_text"
+                                android:textSize="@dimen/regular_font_size" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/TextAppearance.MaterialComponents.Headline1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/component_spacing_3dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:maxLines="1"
+                                android:id="@+id/tvContact"
+                                android:paddingHorizontal="@dimen/standard_spacing"
+                                android:textColor="@color/black"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/sub_title_font_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="visible"
+                    android:layout_marginLeft="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:gravity="bottom"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="Pickup Address"
+                        android:textColor="@color/grey_text"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/address_marker_blue_icon" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoe_ui"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:id="@+id/tvPickUpAddress"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:layout_gravity="right"
+                            android:visibility="gone"
+                            android:id="@+id/tvViewAll"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/skynet_color"
+                            android:textFontWeight="600"
+                            android:text="@string/view_all"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="50dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="Consignee Address"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/regular_font_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="2"
+                            android:layout_weight="5"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:id="@+id/tvDroppOffAddress"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:layout_gravity="right"
+                            android:visibility="gone"
+                            android:id="@+id/tvViewAll1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:textColor="@color/skynet_color"
+                            android:textFontWeight="600"
+                            android:text="@string/view_all"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="2"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="Appointment"
+                        android:textColor="@color/skynet_color"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_7dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="Date:"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:id="@+id/tvPickUpDate"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:text="Time"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:id="@+id/tvTime"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="2"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:text="Instruction"
+                        android:textColor="@color/skynet_color"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/component_spacing_10dp"
+                    android:id="@+id/tvSpecialInstractions"
+                    android:textColor="@color/grey_text"
+                    android:textSize="@dimen/regular_font_size" />
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="2"
+                        android:paddingHorizontal="@dimen/standard_spacing"
+                        android:layout_marginTop="@dimen/component_spacing_5dp"
+                        android:text="Parcels "
+                        android:textColor="@color/skynet_color"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_7dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:id="@+id/tvParcels"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/standard_spacing"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:text="Failure Reason "
+                    android:textColor="@color/skynet_color"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/regular_font_size"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_7dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Headline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1"
+                        android:id="@+id/tvFailureReason"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/regular_font_size"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/grey_view_component"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/component_spacing_10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/igmClientProfile"
+                        android:src="@drawable/man" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:id="@+id/tvClientNames"
+                            android:textColor="@color/black"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/large_title_font_size"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/segoe_ui"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/standard_spacing"
+                            android:text="Contact Person "
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:visibility="gone"
+                        android:id="@+id/imgDialToClient"
+                        android:src="@drawable/blue_customer_call_icon" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:background="@drawable/button_background_red_borders"
+                    android:gravity="center_vertical"
+                    android:id="@+id/unableToDeliver"
+                    android:visibility="gone"
+                    android:paddingHorizontal="@dimen/component_spacing_20dp"
+                    android:paddingVertical="@dimen/component_spacing_7dp">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/segoe_ui"
+                        android:gravity="center_vertical"
+                        android:text="Unable to Deliver"
+                        android:textColor="@color/red"
+                        android:layout_centerInParent="true"
+                        android:textFontWeight="800"
+                        android:textSize="@dimen/sub_title_font_size"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_5dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnGoToPickUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="@dimen/component_spacing_15dp"
+                        android:background="@drawable/button_background"
+                        android:text="Action Delivery "
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/secure_delivery_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

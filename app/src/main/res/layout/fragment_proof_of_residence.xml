@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".fragments.secureDeliverypackage.ProofOfResidenceFragment">
+
+    <Button
+        android:id="@+id/captureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:text="Capture Image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imageRecyclerView"
+        android:id="@+id/imageButtonLayout"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/component_spacing_10dp">
+
+        <Button
+            android:id="@+id/removeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Remove Photo"
+            android:background="@drawable/button_background_red_borders"
+            android:textColor="@color/red"
+            android:layout_marginEnd="@dimen/component_spacing_5dp"
+            android:textAllCaps="false"
+            android:paddingHorizontal="16dp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/captureMoreButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take Another Photo"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:paddingHorizontal="16dp"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imageRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:padding="8dp"
+        android:layout_above="@+id/doneButton"
+        android:clipToPadding="false"
+        android:scrollbars="horizontal"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/component_spacing_5dp"
+        android:background="@drawable/green_button_background"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:paddingHorizontal="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/imageButtonLayout"
+        android:visibility="gone"
+        android:id="@+id/imageView"
+        android:layout_marginVertical="@dimen/component_spacing_5dp"/>
+
+</RelativeLayout>

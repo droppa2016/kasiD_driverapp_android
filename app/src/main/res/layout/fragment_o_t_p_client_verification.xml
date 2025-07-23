@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OTPVerification">
+
+    <include layout="@layout/background_splash_gradient" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/white_card"
+        android:elevation="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/top_auth_layout"
+                    layout="@layout/unauthorized_header_component" />
+
+                <!--HERE-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/component_spacing_10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="7dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="center"
+                            android:text="OTP sent to:"
+                            android:textColor="@color/grey_text"
+                            android:textSize="@dimen/regular_font_size" />
+
+                        <TextView
+                            android:id="@+id/mobileNumber_txt"
+                            style="@style/TextAppearance.MaterialComponents.Headline1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoe_ui"
+                            android:gravity="center"
+                            android:text="CONSIGNEE"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sub_title_font_size"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/standard_spacing"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="5dp"
+                            android:paddingTop="17dp"
+                            android:paddingBottom="7dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/otpBlock1"
+                                    android:layout_width="45dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginRight="7dp"
+                                    android:background="@drawable/otp_block_background"
+                                    android:digits="0123456789"
+                                    android:gravity="center"
+                                    android:hint="-"
+                                    android:inputType="number"
+                                    android:maxLength="1"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/grey_text"
+                                    android:textSize="@dimen/large_text_font_size" />
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/otpBlock2"
+                                    android:layout_width="45dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginRight="7dp"
+                                    android:background="@drawable/otp_block_background"
+                                    android:digits="0123456789"
+                                    android:gravity="center"
+                                    android:hint="-"
+                                    android:inputType="number"
+                                    android:maxLength="1"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/grey_text"
+                                    android:textSize="@dimen/large_text_font_size" />
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/otpBlock3"
+                                    android:layout_width="45dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginRight="7dp"
+                                    android:background="@drawable/otp_block_background"
+                                    android:digits="0123456789"
+                                    android:gravity="center"
+                                    android:hint="-"
+                                    android:inputType="number"
+                                    android:maxLength="1"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/grey_text"
+                                    android:textSize="@dimen/large_text_font_size" />
+
+                                <TextView
+                                    android:layout_width="15dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textStyle="bold"
+                                    android:textSize="25sp"
+                                    android:textColor="@color/black"/>
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/otpBlock4"
+                                    android:layout_width="45dp"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/otp_block_background"
+                                    android:digits="0123456789"
+                                    android:gravity="center"
+                                    android:layout_marginRight="7dp"
+                                    android:hint="-"
+                                    android:inputType="number"
+                                    android:maxLength="1"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/grey_text"
+                                    android:textSize="@dimen/large_text_font_size" />
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/otpBlock5"
+                                    android:layout_width="45dp"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/otp_block_background"
+                                    android:digits="0123456789"
+                                    android:gravity="center"
+                                    android:hint="-"
+                                    android:layout_marginRight="7dp"
+                                    android:inputType="number"
+                                    android:maxLength="1"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/grey_text"
+                                    android:textSize="@dimen/large_text_font_size" />
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/otpBlock6"
+                                    android:layout_width="45dp"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/otp_block_background"
+                                    android:digits="0123456789"
+                                    android:gravity="center"
+                                    android:hint="-"
+                                    android:inputType="number"
+                                    android:maxLength="1"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/grey_text"
+                                    android:textSize="@dimen/large_text_font_size" />
+
+                            </LinearLayout>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/regular_font_size"
+                                android:textColor="@color/skynet_red"
+                                android:layout_marginTop="@dimen/component_spacing_7dp"
+                                android:fontFamily="@font/segoe_ui"
+                                android:visibility="gone"
+                                android:id="@+id/txtErrorMessage"
+                                android:textAlignment="center"
+                                android:layout_marginHorizontal="35dp"
+                                android:text="Invalid Pin provided. please verify."/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnVerifyAccount"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_height"
+                                android:layout_marginHorizontal="35dp"
+                                android:layout_marginTop="@dimen/component_spacing_25dp"
+                                android:background="@drawable/button_background"
+                                android:gravity="center"
+                                android:text="Verify"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingVertical="@dimen/component_spacing_25dp">
+
+                        <LinearLayout
+                            android:id="@+id/resendOtpLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:gravity="center"
+                                    android:text="Consignee did not receive an OTP?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="@dimen/regular_font_size" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/txtResendOTP"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/segoe_ui"
+                                    android:gravity="center"
+                                    android:text="Resend OTP"
+                                    android:textColor="@color/skynet_color"
+                                    android:textSize="@dimen/sub_title_font_size"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

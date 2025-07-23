@@ -1,0 +1,40 @@
+<!-- res/layout/custom_snackbar_layout.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/grey_line"
+    android:id="@+id/root"
+    android:layout_margin="@dimen/component_spacing_15dp"
+    app:cardCornerRadius="@dimen/component_spacing_5dp"
+    app:contentPadding="@dimen/component_spacing_15dp"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Icon ImageView -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/snackbar_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp" />
+
+        <!-- Text View for the message -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@android:id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/component_spacing_5dp"
+            style="@style/TextAppearance.MaterialComponents.Headline1"
+            android:textStyle="bold"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="Test"
+            android:textSize="@dimen/regular_font_size" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

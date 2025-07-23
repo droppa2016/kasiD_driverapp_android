@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:id="@+id/parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/custom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <include layout="@layout/custon_action_bar" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/component_spacing_25dp"
+            android:src="@drawable/plane_ticket" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Headline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="OnBoarding Parcel"
+            android:textColor="@color/skynet_color"
+            android:textSize="@dimen/large_title_font_size"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+            android:layout_marginTop="@dimen/component_spacing_15dp"
+            android:background="@drawable/text_background"
+            android:padding="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtFlightNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/text_background_no_border"
+                android:drawableLeft="@drawable/departure_icon"
+                android:drawablePadding="9dp"
+                android:drawableTint="@color/grey_text1"
+                android:focusable="true"
+                android:fontFamily="@font/segoe_ui"
+                android:hint="Flight Number"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:textColor="@color/grey_text"
+                android:textColorHint="@color/light_grey"
+                android:textSize="@dimen/regular_font_size"
+                android:textStyle="bold"
+                app:textInputLayoutFocusedRectEnabled="false" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/component_spacing_15dp"
+            android:background="@drawable/text_background"
+            android:padding="2dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/component_spacing_10dp"
+                android:src="@drawable/baseline_message_24"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtExtraInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/text_background_no_border"
+                android:drawablePadding="9dp"
+                android:drawableTint="@color/grey_text1"
+                android:focusable="true"
+                android:maxLines="4"
+                android:fontFamily="@font/segoe_ui"
+                android:hint="Any specifications (optional)"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:textColor="@color/grey_text"
+                android:textColorHint="@color/light_grey"
+                android:textSize="@dimen/regular_font_size"
+                android:textStyle="bold"
+                app:textInputLayoutFocusedRectEnabled="false" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_20dp"
+            android:layout_marginTop="@dimen/component_spacing_15dp"
+            android:fontFamily="@font/segoe_ui"
+            android:maxLines="2"
+            android:text="Departure  Date &amp; Time"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/regular_font_size" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            app:contentPadding="@dimen/component_spacing_15dp"
+            android:layout_marginTop="@dimen/component_spacing_5dp"
+            app:cardCornerRadius="@dimen/component_spacing_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.55"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:padding="15dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/departure_plane" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_5dp"
+                        android:background="@drawable/text_background"
+                        android:padding="2dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtDepartureDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/text_background_no_border"
+                            android:drawableLeft="@drawable/calendar_date_icon"
+                            android:drawablePadding="7dp"
+                            android:drawableTint="@color/grey_text1"
+                            android:focusable="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="00/00/0000"
+                            android:inputType="textWebEmailAddress"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/grey_text"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnDDateP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/button_background"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/component_spacing_7dp"
+                            android:text="Set"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_5dp"
+                        android:background="@drawable/text_background"
+                        android:padding="2dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtDepartureTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/text_background_no_border"
+                            android:drawableLeft="@drawable/phone_icon_registration"
+                            android:drawablePadding="7dp"
+                            android:drawableTint="@color/grey_text1"
+                            android:focusable="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="12:00 AM"
+                            android:inputType="textWebEmailAddress"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/grey_text"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnDTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/button_background"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/component_spacing_7dp"
+                            android:text="Set"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+            android:layout_marginTop="@dimen/component_spacing_20dp"
+            android:fontFamily="@font/segoe_ui"
+            android:maxLines="2"
+            android:text="Arrival Date &amp; Time"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/regular_font_size" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            app:contentPadding="@dimen/component_spacing_15dp"
+            android:layout_marginTop="@dimen/component_spacing_5dp"
+            app:cardCornerRadius="@dimen/component_spacing_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.55"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:padding="15dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/arrival_plane" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_5dp"
+                        android:background="@drawable/text_background"
+                        android:padding="2dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtArrivalDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/text_background_no_border"
+                            android:drawableLeft="@drawable/phone_icon_registration"
+                            android:drawablePadding="7dp"
+                            android:drawableTint="@color/grey_text1"
+                            android:focusable="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="00/00/0000"
+                            android:inputType="textWebEmailAddress"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/grey_text"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnADate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/button_background"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/component_spacing_7dp"
+                            android:text="Set"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_5dp"
+                        android:background="@drawable/text_background"
+                        android:padding="2dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtArrivalTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/text_background_no_border"
+                            android:drawableLeft="@drawable/phone_icon_registration"
+                            android:drawablePadding="7dp"
+                            android:drawableTint="@color/grey_text1"
+                            android:focusable="false"
+                            android:fontFamily="@font/segoe_ui"
+                            android:hint="12:00 am"
+                            android:inputType="textWebEmailAddress"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/grey_text"
+                            android:textColorHint="@color/light_grey"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textStyle="bold"
+                            app:textInputLayoutFocusedRectEnabled="false" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnATime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/button_background"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/component_spacing_7dp"
+                            android:text="Set"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/component_spacing_25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/component_spacing_30dp"
+            android:layout_marginEnd="@dimen/component_spacing_25dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="@dimen/component_spacing_25dp"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:paddingHorizontal="45dp"
+            android:text="Done"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

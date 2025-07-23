@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_cream"
+    tools:context=".FinancialDashboardHome">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+            android:layout_marginTop="@dimen/component_spacing_10dp"
+            android:layout_marginBottom="@dimen/component_spacing_5dp"
+            android:backgroundTint="@color/card_background"
+            app:cardCornerRadius="@dimen/component_spacing_15dp"
+            app:contentPadding="@dimen/component_spacing_7dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/component_spacing_25dp"
+                    android:layout_height="@dimen/component_spacing_25dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:src="@drawable/dashboard_warehouse_collection_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_15dp"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/component_spacing_5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/component_spacing_7dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/total_waybills"
+                            android:textColor="#374957"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewSubHeading"
+                            android:layout_width="match_parent"
+                            android:maxLines="2"
+                            android:text="@string/all_collections_and_deliveries_overall"
+                            android:textSize="@dimen/regular_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/component_spacing_7dp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/totalWaybillsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="@dimen/component_spacing_10dp"
+                            android:layout_weight="900"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/_0"
+                            android:textColor="#374957"
+                            android:textSize="32sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_spacing_15dp"
+                    android:background="@color/quantum_grey300"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="@dimen/component_spacing_10dp"
+                    android:paddingVertical="@dimen/component_spacing_4dp"
+                    android:text="@string/today_s_debriefing"
+                    android:textColor="#374957"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_15dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="@dimen/component_spacing_10dp"
+                        android:src="@drawable/dashboard_red_deliveries_icon"
+                        app:tint="@color/skynet_red" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewRecyclerViewHeading"
+                            android:text="@string/collections"
+                            android:textColor="@color/skynet_red" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewSubHeading"
+                            android:text="@string/completed_collections_from_clients" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/red_box" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/todaysCollectionsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:padding="@dimen/component_spacing_5dp"
+                            android:text="@string/_0"
+                            android:textColor="@color/skynet_red"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
+                    android:background="@color/grey_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+                    android:layout_marginTop="@dimen/component_spacing_15dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="@dimen/component_spacing_10dp"
+                        android:src="@drawable/dashboard_red_deliveries_icon"
+                        app:tint="@color/skynet_blue" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewRecyclerViewHeading"
+                            android:text="@string/deliveries"
+                            android:textColor="@color/skynet_blue" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewSubHeading"
+                            android:text="@string/completed_deliveries_from_warehouse" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/blue_box" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/todaysDeliveriesText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="@string/_0"
+                            android:textColor="@color/skynet_blue"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/component_spacing_10dp"
+            android:layout_weight="1.1"
+            android:background="@drawable/layout_shape"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/component_spacing_7dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewRecyclerViewHeading"
+                android:layout_marginHorizontal="@dimen/component_spacing_25dp"
+                android:layout_marginTop="@dimen/component_spacing_10dp"
+                android:text="@string/activities"
+                android:textSize="14sp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crdRateCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="@color/card_background"
+                        android:clickable="false"
+                        app:cardCornerRadius="15dp"
+
+                        app:contentPadding="15dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/ratesLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_marginEnd="@dimen/component_spacing_10dp"
+                                android:background="@drawable/rates"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/dashboard_rates__wallet_money_icon" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewRecyclerViewHeading"
+                                    android:text="@string/rates" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewSubHeading"
+                                    android:text="@string/owner_consent" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crdReportCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="@dimen/component_spacing_3dp"
+                        android:backgroundTint="@color/card_background"
+                        android:clickable="false"
+                        app:cardCornerRadius="15dp"
+                        app:contentPadding="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_marginEnd="@dimen/component_spacing_10dp"
+                                android:scaleType="center"
+                                android:src="@drawable/dashboard_report_icon" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewRecyclerViewHeading"
+                                    android:text="@string/report" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewSubHeading"
+                                    android:text="@string/owner_consent" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crdPenaltiesCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="@color/card_background"
+                        android:visibility="gone"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="5dp"
+                        app:contentPadding="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:scaleType="center"
+                                android:src="@drawable/dashboard_penalties_icon" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="7dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/penalties"
+                                    android:textColor="@color/black" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="7dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/driver_consent"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

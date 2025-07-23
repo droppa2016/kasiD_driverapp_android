@@ -1,0 +1,265 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".VehicleRegistrationSelection">
+
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_above="@id/btnSubmit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="100dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E6E6E6"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/component_spacing_15dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="GPS:"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_gps_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Enabled"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Status:"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/signalStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/wifi_icon" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="20sp"
+                android:src="@drawable/vehicle_registracion_img" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Vehicle Details"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/vehicleRegNumSelect"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/custom_edittext_border"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:hint="Enter Vehicle Registration"
+                android:inputType="text"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/lytVehicleRegDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Registration Number:"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtVehicleRegNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Vehicle Make:"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtRegVehicleType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Vehicle Model:"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtRegVehicleColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:elevation="32dp"
+                android:layout_marginHorizontal="25dp"
+                android:paddingHorizontal="@dimen/component_spacing_25dp"
+                android:orientation="vertical"
+                android:background="@drawable/white_card"
+                android:visibility="gone">
+
+                <include
+                    android:id="@+id/header_un"
+                    layout="@layout/unauthorized_header_component" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingHorizontal="25dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/standard_spacing">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_background"
+                            app:textInputLayoutFocusedRectEnabled="false"
+                            android:layout_marginTop="@dimen/component_spacing_25dp"
+                            android:hint="@string/enter_reg_number"
+                            android:textSize="@dimen/regular_font_size"
+                            android:textColorHint="@color/light_grey"
+                            android:inputType="textNoSuggestions"
+                            android:fontFamily="@font/segoe_ui"
+                            android:textStyle="bold"
+                            android:textColor="@color/grey_text"
+                            android:paddingHorizontal="@dimen/component_spacing_10dp"
+                            android:drawablePadding="7dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Search"
+        android:fontFamily="@font/poppins_regular"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+        android:layout_marginVertical="15dp"
+        android:textSize="14sp" />
+
+</RelativeLayout>

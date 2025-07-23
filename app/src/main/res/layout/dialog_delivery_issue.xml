@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/white_card">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextViewDescription"
+        android:layout_marginTop="2dp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:id="@+id/heading"
+        android:paddingHorizontal="@dimen/standard_spacing"
+        android:text="Fail Delivery"
+        android:textColor="@color/red"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp" />
+
+    <Spinner
+        android:id="@+id/issueSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:background="@drawable/grey_button_borders"/>
+
+
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_button_borders"
+            android:enabled="true"
+            android:layout_marginTop="@dimen/component_spacing_10dp"
+            android:layout_below="@id/issueSpinner"
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:hint="Enter recipient Name"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/previewLayout"
+        android:visibility="invisible"
+        android:layout_below="@id/nameEditText">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/black" />
+
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/previewView"
+            android:enabled="false"
+            android:layout_marginTop="16dp"
+            android:text="Capture Photo" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/nameEditText"
+        android:visibility="gone"
+        android:id="@+id/imagePreview"/>
+
+    <EditText
+        android:id="@+id/notesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grey_button_borders"
+        android:layout_below="@id/imagePreview"
+        android:enabled="true"
+        android:lines="2"
+        android:padding="2dp"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:hint="Notes"/>
+
+    <Button
+        android:id="@+id/btnDoneFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notesText"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/component_spacing_10dp"
+        android:textColor="@color/red"
+        android:background="@drawable/button_background_red_borders"
+        android:text="Done"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/rcvRevenueRecords"
+        android:layout_above="@+id/lytSummery"
+        android:orientation="vertical"/>
+
+    <!--SUmmery-->
+    <LinearLayout
+        android:id="@+id/lytSummery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_summery_background"
+        android:orientation="vertical"
+        android:paddingVertical="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="65dp"
+            android:background="@drawable/white_stroke_container"
+            android:orientation="horizontal"
+            android:paddingHorizontal="35dp">
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp">
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Revenue"
+                    android:textColor="@color/quantum_white_100"
+                    android:textFontWeight="500"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text=""
+                    android:textColor="@color/quantum_white_100"
+                    android:textFontWeight="500"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRevenueAmnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="R 00.00"
+                    android:textColor="@color/quantum_white_100"
+                    android:textFontWeight="500"
+                    android:textSize="12sp" />
+            </TableRow>
+        </TableLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@color/quantum_white_100" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp">
+
+            <TableRow android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Fuel Surcharge"
+                    android:textColor="@color/quantum_white_100"
+                    android:textFontWeight="500"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text=""
+                    android:textColor="@color/quantum_white_100"
+                    android:textFontWeight="500"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFuelSurchargePerc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="0 %"
+                    android:textColor="@color/quantum_white_100"
+                    android:textFontWeight="500"
+                    android:textSize="12sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp">
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Total Profit "
+                    android:textColor="@color/quantum_white_100"
+                    android:textFontWeight="500"
+                    android:textSize="18sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text=""
+                    android:textColor="@color/quantum_white_100"
+                    android:textFontWeight="500"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProfitAmnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="R 00.00"
+                    android:textColor="@color/quantum_white_100"
+                    android:textFontWeight="500"
+                    android:textSize="18sp" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>

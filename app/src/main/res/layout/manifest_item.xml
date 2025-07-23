@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/component_spacing_10dp"
+    android:layout_marginBottom="@dimen/component_spacing_5dp"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/component_spacing_10dp"
+    app:cardElevation="@dimen/component_spacing_5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tripNoText"
+            style="@style/TextViewRecyclerViewHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Trip No : TripXYZ123" />
+
+        <TextView
+            android:id="@+id/waybillText"
+            style="@style/TextViewSubHeading"
+            tools:text="Waybills: 20" />
+
+        <TextView
+            android:id="@+id/parcelsText"
+            style="@style/TextViewSubHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Parcels: 50" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

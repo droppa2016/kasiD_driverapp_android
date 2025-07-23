@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <TableRow   xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/trParent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="5dp"
+        android:text="volume"
+        android:id="@+id/trCal1"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-condensed"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:text="R 100,000.00"
+        android:id="@+id/trCal2"
+        android:fontFamily="sans-serif-condensed"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:text="R 100,000.00"
+        android:id="@+id/trCal3"
+        android:clickable="false"
+        android:fontFamily="sans-serif-condensed"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        />
+    </TableRow>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="@dimen/component_spacing_15dp"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/component_spacing_5dp"
+        android:layout_marginHorizontal="@dimen/component_spacing_25dp"
+        android:layout_marginBottom="@dimen/component_spacing_15dp"
+        android:backgroundTint="@color/card_background"
+        app:cardCornerRadius="@dimen/component_spacing_15dp"
+        app:contentPadding="@dimen/component_spacing_15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                app:lottie_autoPlay="true"
+                android:layout_marginTop="-25dp"
+                app:lottie_fileName="success_anim.json"
+                app:lottie_loop="false" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.MaterialComponents.Headline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed"
+                android:layout_marginTop="-25dp"
+                android:textColor="@color/green"
+                android:textFontWeight="500"
+                android:textSize="@dimen/title_font_size"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/alertMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_3dp"
+                android:text="The Job is completed successfully."
+                android:textAlignment="center"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/regular_font_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="@dimen/component_spacing_5dp"
+                android:background="@color/grey_text"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_spacing_5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background_negative_borders"
+                    android:paddingHorizontal="@dimen/component_spacing_15dp"
+                    android:text="Exit"
+                    android:textColor="@color/skynet_red"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnContinue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/button_background_positive"
+                    android:gravity="center"
+                    android:paddingHorizontal="45dp"
+                    android:text="Ok"
+                    android:textColor="@color/skynet_color" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
