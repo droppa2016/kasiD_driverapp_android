@@ -16,5 +16,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "kasi D"
+rootProject.name = "kasiD Driver"
 include(":app")

@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Kasi D</string>
+    <string name="app_name">KasiD Driver</string>
 
     <string name="Notification_Listener">Notification Listener</string>
     <string name="ACTION_NOTIFICATION_LISTENER">co.za.droppa.ACTION_NOTIFICATION_LISTENER</string>
