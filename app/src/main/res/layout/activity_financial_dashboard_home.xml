@@ -27,7 +27,10 @@
                 android:orientation="vertical"
                 android:paddingBottom="@dimen/component_spacing_15dp">
 
-
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
 
                 <androidx.cardview.widget.CardView
@@ -93,25 +96,31 @@
                     android:layout_marginHorizontal="15dp"
                     android:layout_marginTop="@dimen/component_spacing_10dp"
                     android:layout_marginBottom="@dimen/component_spacing_3dp"
+                    android:layout_weight="1"
                     android:backgroundTint="@color/card_background"
                     app:cardCornerRadius="15dp"
                     app:contentPadding="15dp">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/dashboard_blue_collections_icon" />
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:id="@+id/collections_icon"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/collections_icon"/>
+
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
                             android:orientation="vertical"
                             android:paddingHorizontal="@dimen/component_spacing_10dp">
 
@@ -119,35 +128,22 @@
                                 style="@style/TextViewRecyclerViewHeading"
                                 android:text="@string/collections" />
 
-                            <androidx.appcompat.widget.AppCompatTextView
-                                style="@style/TextViewDescription"
-                                android:text="@string/allocated_collection"
-                                android:textColor="@color/grey_text" />
+
                         </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/blue_box" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/tvReservedCollection"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@+id/collections_icon"
                                 android:layout_marginHorizontal="7dp"
                                 android:fontFamily="@font/poppins_regular"
                                 android:text="@string/_0"
                                 android:textColor="@color/dark_blue"
-                                android:textSize="24sp" />
+                                android:textSize="35sp" />
 
-                        </RelativeLayout>
-                    </LinearLayout>
+                    </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -155,49 +151,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="15dp"
-                    android:layout_marginTop="@dimen/component_spacing_3dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/component_spacing_10dp"
                     android:backgroundTint="@color/card_background"
                     app:cardCornerRadius="15dp"
                     app:contentPadding="15dp">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="100dp"
+                        android:orientation="vertical">
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/dashboard_red_deliveries_icon" />
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/deliveries_icon"/>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="vertical"
-                            android:paddingHorizontal="@dimen/component_spacing_10dp">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 style="@style/TextViewRecyclerViewHeading"
+                        android:textColor="@color/skynet_red"
+                                android:layout_centerHorizontal="true"
+                                android:layout_alignParentBottom="true"
                                 android:text="@string/deliveries" />
 
-                            <androidx.appcompat.widget.AppCompatTextView
-                                style="@style/TextViewDescription"
-                                android:text="@string/allocated_deliveries"
-                                android:textColor="@color/grey_text" />
-
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/red_box" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/tvNumDeliveries"
@@ -208,164 +186,161 @@
                                 android:fontFamily="@font/poppins_regular"
                                 android:text="@string/_0"
                                 android:textColor="@color/skynet_red"
-                                android:textSize="24sp" />
-                        </RelativeLayout>
-                    </LinearLayout>
+                                android:textSize="35sp" />
+
+                    </RelativeLayout>
                 </androidx.cardview.widget.CardView>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/component_spacing_10dp"
-                    android:orientation="horizontal"
-                    android:paddingVertical="@dimen/component_spacing_5dp">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/crdfailedDeliveries"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="15dp"
-                        android:layout_marginTop="@dimen/component_spacing_3dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/card_background"
-                        app:cardCornerRadius="15dp"
-                        app:contentPadding="15dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:baselineAligned="false"
-                            android:orientation="horizontal">
-
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center_vertical"
-                                android:orientation="vertical">
-
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    style="@style/TextViewRecyclerViewHeading"
-                                    android:text="@string/failed_deliveries" />
-
-                            </LinearLayout>
-
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:id="@+id/tvFailedDeliveries"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:layout_marginHorizontal="7dp"
-                                    android:fontFamily="@font/poppins_regular"
-                                    android:text="@string/_0"
-                                    android:textColor="@color/skynet_red"
-                                    android:textSize="24sp" />
-                            </RelativeLayout>
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/crdfailedCollections"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="15dp"
-                        android:layout_marginTop="@dimen/component_spacing_3dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/card_background"
-                        app:cardCornerRadius="15dp"
-                        app:contentPadding="15dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:baselineAligned="false"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center_vertical"
-                                android:orientation="vertical">
-
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    style="@style/TextViewRecyclerViewHeading"
-                                    android:text="@string/failed_collection" />
-
-                            </LinearLayout>
-
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:id="@+id/tvFailedCollections"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:layout_marginHorizontal="7dp"
-                                    android:fontFamily="@font/poppins_regular"
-                                    android:text="@string/_0"
-                                    android:textColor="@color/skynet_red"
-                                    android:textSize="24sp" />
-
-                            </RelativeLayout>
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/component_spacing_10dp"
-                    android:orientation="horizontal"
-                    android:paddingVertical="@dimen/component_spacing_5dp">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/crdSuccessfulDeliveries"
+                    android:orientation="horizontal">
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="15dp"
-                        android:layout_marginTop="@dimen/component_spacing_3dp"
+                        android:layout_marginTop="@dimen/component_spacing_10dp"
                         android:layout_weight="1"
-                        android:backgroundTint="@color/card_background"
-                        app:cardCornerRadius="15dp"
-                        app:contentPadding="15dp">
+                        android:orientation="vertical"
+                        android:paddingVertical="@dimen/component_spacing_5dp">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/crdSuccessfulCollections"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:baselineAligned="false"
-                            android:orientation="horizontal">
-
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/card_background"
+                            app:cardCornerRadius="15dp"
+                            app:contentPadding="15dp">
 
                             <LinearLayout
-                                android:layout_width="0dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center_vertical"
+                                android:baselineAligned="false"
+                                android:gravity="center_horizontal"
                                 android:orientation="vertical">
+
+
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/success_collection_delivery_icon"/>
+
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSuccessfulCollections"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginHorizontal="7dp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="@string/_0"
+                                        android:textColor="@color/black"
+                                        android:textSize="24sp" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     style="@style/TextViewRecyclerViewHeading"
-                                    android:text="@string/successful_deliveries"
+                                    android:text="@string/successful_collection"
+                                    android:gravity="center_horizontal"
                                     android:textColor="@color/green" />
 
                             </LinearLayout>
 
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/crdfailedCollections"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/card_background"
+                            app:cardCornerRadius="15dp"
+                            app:contentPadding="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/failed_collection"/>
+
+
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvFailedCollections"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginHorizontal="7dp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="@string/_0"
+                                        android:textColor="@color/skynet_red"
+                                        android:textSize="24sp" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewRecyclerViewHeading"
+                                    android:text="@string/failed_collection" />
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/component_spacing_10dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/component_spacing_5dp">
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/crdSuccessfulDeliveries"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:layout_weight="1"
+                            android:layout_marginBottom="@dimen/component_spacing_10dp"
+                            android:backgroundTint="@color/card_background"
+                            app:cardCornerRadius="15dp"
+                            app:contentPadding="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/success_collection_delivery_icon"/>
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/tvSuccessfulDeliveries"
@@ -377,67 +352,72 @@
                                     android:text="@string/_0"
                                     android:textColor="@color/black"
                                     android:textSize="24sp" />
-                            </RelativeLayout>
 
-                        </LinearLayout>
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewRecyclerViewHeading"
+                                        android:text="@string/successful_deliveries"
+                                        android:gravity="center_horizontal"
+                                        android:textColor="@color/green" />
 
-                    </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/crdSuccessfulCollections"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="15dp"
-                        android:layout_marginTop="@dimen/component_spacing_3dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/card_background"
-                        app:cardCornerRadius="15dp"
-                        app:contentPadding="15dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:baselineAligned="false"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center_vertical"
-                                android:orientation="vertical">
-
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    style="@style/TextViewRecyclerViewHeading"
-                                    android:text="@string/successful_collection"
-                                    android:textColor="@color/green" />
 
                             </LinearLayout>
 
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/crdfailedDeliveries"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="@dimen/component_spacing_3dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/card_background"
+                            app:cardCornerRadius="15dp"
+                            app:contentPadding="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/failed_delivery_icon"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvFailedDeliveries"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="7dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="@string/_0"
+                                        android:textColor="@color/skynet_red"
+                                        android:textSize="24sp" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
-                                    android:id="@+id/tvSuccessfulCollections"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:layout_marginHorizontal="7dp"
-                                    android:fontFamily="@font/poppins_regular"
-                                    android:text="@string/_0"
-                                    android:textColor="@color/black"
-                                    android:textSize="24sp" />
+                                    style="@style/TextViewRecyclerViewHeading"
+                                    android:layout_below="@+id/tvFailedDeliveries"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="@string/failed_deliveries"  />
 
-                            </RelativeLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
 
-                        </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
 
                 </LinearLayout>
 
-                <!--            34567890-->
+
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
