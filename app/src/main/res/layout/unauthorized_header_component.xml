@@ -30,7 +30,7 @@
         android:gravity="center"
         android:maxLines="2"
         android:paddingHorizontal="@dimen/standard_spacing"
-        android:text="Skynet Driver App."
+        android:text="Kasi Driver App."
         android:textColor="@color/grey_text"
         android:textSize="@dimen/regular_font_size" />
 </LinearLayout>
