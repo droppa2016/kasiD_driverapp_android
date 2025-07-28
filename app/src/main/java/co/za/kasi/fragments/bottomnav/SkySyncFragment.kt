@@ -164,6 +164,7 @@ class SkySyncFragment : Fragment() {
                                     number = waybill.number,
                                     serviceType = waybill.serviceType,
                                     date = waybill.date,
+                                    status = waybill.status,
                                     statusDescription = waybill.statusDescription,
                                     deliveryBranch = waybill.deliveryBranch,
                                     deliveryDate = waybill.deliveryDate,

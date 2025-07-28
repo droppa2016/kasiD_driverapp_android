@@ -334,7 +334,9 @@ class DeliveriesList : AppCompatActivity() {
                         AppCache.setCurrentWaybill(null)
 
                         setupRecyclerView(
-                            waybills.sortedWith(
+                            waybills
+                                .filter { it.status != "DELIVERED" }
+                                .sortedWith(
                                 compareBy({ it.consignee?.town ?: "ZZZ" },
                                     {it.consignee?.addressLine1 ?: "ZZZ"},{ it.number })
                             )

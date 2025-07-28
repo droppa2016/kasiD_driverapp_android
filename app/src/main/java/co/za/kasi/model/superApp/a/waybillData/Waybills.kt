@@ -25,6 +25,7 @@ data class Waybills(
     val serviceType: String?,
     val specialInstructions: String?,
     val date: String?,
+    val status: String?,
     val accountNumber: String?,
     val orderNumber: String?,
     val clientReference: String?,
