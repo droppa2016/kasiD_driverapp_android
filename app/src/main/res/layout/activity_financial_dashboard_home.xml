@@ -260,6 +260,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="15dp"
+                            android:layout_marginBottom="@dimen/component_spacing_5dp"
                             android:layout_marginTop="@dimen/component_spacing_3dp"
                             android:layout_weight="1"
                             android:backgroundTint="@color/card_background"
@@ -367,6 +368,7 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            android:layout_marginBottom="@dimen/component_spacing_5dp"
                             android:id="@+id/crdfailedDeliveries"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

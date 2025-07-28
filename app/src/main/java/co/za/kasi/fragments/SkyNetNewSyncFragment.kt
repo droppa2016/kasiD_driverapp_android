@@ -71,7 +71,6 @@ class SkyNetNewSyncFragment : Fragment() {
             if (syncType == "FIRST_LOGIN") {
                 launchHomeActivity(safeContext)
             }
-
         }
 
         binding.btnRefresh.setOnClickListener {
@@ -176,7 +175,6 @@ class SkyNetNewSyncFragment : Fragment() {
                     return@launch
                 }
 
-                // All passed 🎉
                 setDriverSynced()
                 binding.syncLoadingState.visibility = View.GONE
                 binding.syncCompleteState.visibility = View.VISIBLE
@@ -186,6 +184,14 @@ class SkyNetNewSyncFragment : Fragment() {
                     binding.descriptionText.visibility = View.GONE
                     binding.noManifestText.visibility = View.VISIBLE
                 } else {
+                    val numberOfManifests = tripSummaryRes.body()?.size ?: 0
+                    val numberOfParcels = tripSummaryRes.body()?.sumOf { it.totalParcels} ?: 0
+
+                    binding.numberOfManifests.text =
+                        getString(R.string.number_of_manifests, numberOfManifests.toString())
+                    binding.numberOfParcels.text   =
+                        getString(R.string.number_of_parcels, numberOfParcels.toString())
+
                     binding.manifestsList.visibility = View.VISIBLE
                     binding.descriptionText.visibility = View.VISIBLE
                     binding.noManifestText.visibility = View.GONE

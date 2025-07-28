@@ -75,6 +75,10 @@ class PushNotificationService : FirebaseMessagingService() {
 
                     shouldShowNotification = true
                 }
+
+                else -> {
+                    shouldShowNotification = true
+                }
             }
 
             if(shouldShowNotification){

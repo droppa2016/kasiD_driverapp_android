@@ -99,7 +99,7 @@
             app:drawableEndCompat="@drawable/success_icon" />
 
         <TextView
-            tools:visibility="gone"
+            tools:visibility="visible"
             android:id="@+id/descriptionText"
             style="@style/TextViewHeading"
             android:layout_below="@id/syncedTitle"
@@ -112,13 +112,37 @@
             android:text="@string/list_of_manifests"
             android:textStyle="bold" />
 
+        <TextView
+            tools:visibility="visible"
+            android:id="@+id/numberOfManifests"
+            style="@style/TextDescription"
+            android:layout_below="@id/descriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+            android:drawablePadding="@dimen/component_spacing_20dp"
+            android:textSize="12sp"
+            android:text="Number of Manifests  : " />
+
+        <TextView
+            tools:visibility="visible"
+            android:id="@+id/numberOfParcels"
+            style="@style/TextDescription"
+            android:layout_below="@id/numberOfManifests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/component_spacing_15dp"
+            android:drawablePadding="@dimen/component_spacing_20dp"
+            android:textSize="12sp"
+            android:text="Number of Parcels      : " />
+
         <androidx.recyclerview.widget.RecyclerView
             tools:visibility="gone"
             android:id="@+id/manifestsList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/optionButtonsSection"
-            android:layout_below="@id/descriptionText"
+            android:layout_below="@id/numberOfParcels"
             android:layout_marginTop="@dimen/component_spacing_15dp" />
 
         <TextView

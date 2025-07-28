@@ -35,6 +35,7 @@ import co.za.kasi.utils.networkMonitorService.NetworkConnectivity
 import co.za.kasi.utils.networkMonitorService.NetworkObserver
 import co.za.kasi.utils.webSocket.WebSocketListenerImplementation
 import co.za.kasi.R
+import co.za.kasi.fragments.bottomnav.SkyFinancialFragment
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -142,6 +143,18 @@ class SkynetHome : AppCompatActivity() {
             binding.syncDataText.setTextColor(getColor(R.color.skynet_color))
         }
 
+        binding.financialTab.setOnClickListener {
+            replaceFragment(SkyFinancialFragment())
+            resetTabs()
+            binding.financialTabIcon.setImageDrawable(
+                AppCompatResources.getDrawable(
+                    this,
+                    R.drawable.portfolio_icon_red
+                )
+            )
+            binding.financialTabText.setTextColor(getColor(R.color.skynet_color))
+        }
+
         binding.accountsTab.setOnClickListener {
             replaceFragment(SkyAccountFragment())
             resetTabs()
@@ -233,6 +246,7 @@ class SkynetHome : AppCompatActivity() {
             )
         )
         binding.homeTabText.setTextColor(getColor(R.color.black))
+
         binding.syncDataIcon.setImageDrawable(
             AppCompatResources.getDrawable(
                 this,
@@ -240,6 +254,15 @@ class SkynetHome : AppCompatActivity() {
             )
         )
         binding.syncDataText.setTextColor(getColor(R.color.black))
+
+        binding.financialTabText.setTextColor(getColor(R.color.black))
+        binding.financialTabIcon.setImageDrawable(
+            AppCompatResources.getDrawable(
+                this,
+                R.drawable.portfolio_icon
+            )
+        )
+
         binding.accountsTabIcon.setImageDrawable(
             AppCompatResources.getDrawable(
                 this,

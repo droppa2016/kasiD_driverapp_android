@@ -465,5 +465,7 @@
     <string name="start_deliveries">Start Deliveries</string>
     <string name="no_waybills_found">No waybills found</string>
     <string name="title_place_holder">Title Place Holder</string>
+    <string name="number_of_manifests">Number of Manifests  : %1$s</string>
+    <string name="number_of_parcels">Number of Parcels    : %1$s</string>
 
 </resources>
