@@ -99,10 +99,12 @@ class WaybillDetailActivity : AppCompatActivity(), OnWaybillsScannedListener {
         }
 
         binding.tvAccountNumber.text = waybill?.parcels?.size.toString()
-        binding.tvCompanyName.text = waybill?.consignee?.name
-        binding.tvContact.text = waybill?.consignee?.contact
+      //  binding.tvCompanyName.text = waybill?.consignee?.name
+        binding.tvCompanyName.text = "ABC Traders"
+        binding.tvContact.text = "-"
 
-        binding.tvPhoneNo.text = waybill?.consignee?.telephoneNumber
+        //binding.tvPhoneNo.text = waybill?.consignee?.telephoneNumber
+        binding.tvPhoneNo.text = "12345678"
 
         if (waybill?.consignee?.contact == waybill?.consignee?.name || waybill?.consignee?.contact == "") {
             binding.lytContact.visibility = View.GONE

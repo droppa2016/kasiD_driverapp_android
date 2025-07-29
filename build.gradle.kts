@@ -1,8 +1,5 @@
 buildscript {
     val kotlin_version by extra("1.9.0")
-//    val agp_version by extra("8.8.0")
-//    val agp_version1 by extra("8.3.2")
-//    val agp_version by extra("8.3.0")
     val agp_version2 by extra("8.3.0")
     dependencies {
         classpath("com.google.gms:google-services:4.3.15")

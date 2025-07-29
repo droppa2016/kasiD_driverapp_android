@@ -9,7 +9,7 @@ import co.za.kasi.dao.WaybillDao
 import co.za.kasi.model.superApp.a.waybillData.Waybills
 import co.za.kasi.utils.converters.Converters
 
-@Database(entities = [Waybills::class], version = 1)
+@Database(entities = [Waybills::class], version = 2)
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun waybillDao(): WaybillDao
@@ -24,7 +24,9 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "skynet-database"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 instance
             }

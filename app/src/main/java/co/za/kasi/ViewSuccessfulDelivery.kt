@@ -39,10 +39,12 @@ class ViewSuccessfulDelivery : AppCompatActivity() {
         waybill = intent.getSerializableExtra("waybill") as? Waybills
 
         binding.tvAccountNumber.text = waybill?.parcels?.size.toString()
-        binding.tvCompanyName.text = waybill?.consignee?.name
+        //binding.tvCompanyName.text = waybill?.consignee?.name
+        binding.tvCompanyName.text = "ABC Traders"
         binding.tvContact.text = waybill?.consignee?.contact
 
-        binding.tvPhoneNo.text = waybill?.consignee?.telephoneNumber
+       // binding.tvPhoneNo.text = waybill?.consignee?.telephoneNumber
+        binding.tvPhoneNo.text = "12345678"
 
         if (waybill?.consignee?.contact == waybill?.consignee?.name || waybill?.consignee?.contact == "") {
             binding.lytContact.visibility = View.GONE

@@ -72,7 +72,8 @@ class ViewFailedDelivery : AppCompatActivity(), OnWaybillsScannedListener {
         binding.tvFailureReason.text = waybill?.statusDescription
         binding.tvPickUpAddress.text = "${waybill?.sender?.addressLine1} ${waybill?.sender?.addressLine2}"
         binding.tvDroppOffAddress.text = "${waybill?.consignee?.addressLine1}, ${waybill?.consignee?.addressLine2}, ${waybill?.consignee?.addressLine2}"
-        binding.tvClientNames.text = waybill?.consignee?.name
+       // binding.tvClientNames.text = waybill?.consignee?.name
+        binding.tvClientNames.text = "ABC Traders"
         binding.tvWaybillNumber.text = waybill?.number
         binding.tvSpecialInstractions.text = waybill?.specialInstructions
         binding.tvPickUpDate.text = waybill?.deliveryDate?.substring(0,10)
@@ -80,8 +81,9 @@ class ViewFailedDelivery : AppCompatActivity(), OnWaybillsScannedListener {
         binding.tvCompanyName.text = waybill?.consignee?.name
         binding.tvServiceType.text = waybill?.serviceType
         binding.tvParcels.text =  waybill?.parcels?.size.toString()
-        binding.tvPhoneNo.text = waybill?.consignee?.telephoneNumber
-        binding.tvContact.text = waybill?.consignee?.contact
+      //  binding.tvPhoneNo.text = waybill?.consignee?.telephoneNumber
+        binding.tvPhoneNo.text = "12345678"
+        binding.tvContact.text = "Contact"
 
         Log.d("WAYBILL_OBJ", "onCreate: " + waybill?.consignee.toString())
 
