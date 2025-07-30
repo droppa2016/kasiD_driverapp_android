@@ -144,6 +144,7 @@ class SkySyncFragment : Fragment() {
             ) {
 
                 ReusableFunctions.hideLoader(loader)
+                Log.e("","-------------------------API: ${response.code()}")
 
                 if (response.code() == 200) {
                     lifecycleScope.launch {

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
@@ -64,7 +65,9 @@ class MainActivity : AppCompatActivity() {
         service = ReusableFunctions.initiateSuperAppRetrofit(this)
 
         if (LocationService1.isNetworkAvailable(context = this)) {
-            getAppVersion()
+           // getAppVersion()
+            launchAccountAccessActivity(this@MainActivity)
+            finish()
         } else {
             launchAccountAccessActivity(this@MainActivity)
             finish()
@@ -131,6 +134,7 @@ class MainActivity : AppCompatActivity() {
                 call: Call<AppVersionResponse?>,
                 response: Response<AppVersionResponse?>
             ) {
+                Log.e("","===================================APP VERSION - ${response.code()}")
                 if (response.isSuccessful) {
                     appVersionResponse = response.body()!!
                     handleUpdateBottomSheets(

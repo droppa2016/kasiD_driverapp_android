@@ -19,8 +19,7 @@
         android:paddingHorizontal="@dimen/component_spacing_10dp"
         android:layout_marginBottom="@dimen/component_spacing_20dp"
         android:visibility="visible"
-        android:layout_below="@+id/viewFinder"
-        android:layout_above="@+id/btnCancel">
+        android:layout_below="@+id/viewFinder">
 
 
         <com.google.android.material.textview.MaterialTextView

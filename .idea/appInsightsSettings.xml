@@ -28,9 +28,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="co.za.kasi" />
-                  <option name="mobileSdkAppId" value="1:257435451779:android:88b549833fe532c6ddb6b6" />
-                  <option name="projectId" value="skynet-driver-app" />
-                  <option name="projectNumber" value="257435451779" />
+                  <option name="mobileSdkAppId" value="1:165612841302:android:e4442c0908b4d917368ef7" />
+                  <option name="projectId" value="kasi-d" />
+                  <option name="projectNumber" value="165612841302" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

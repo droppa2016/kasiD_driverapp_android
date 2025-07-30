@@ -272,16 +272,16 @@ class SkynetHome : AppCompatActivity() {
         binding.accountsTabText.setTextColor(getColor(R.color.black))
     }
 
-    fun connectWebSocket(driverId: String) {
-
-        val request: Request = Request.Builder()
-            .url("ws://88.99.94.84:8185/drivers-websocket")
-            .build()
-
-        val listener = WebSocketListenerImplementation()
-        val ws: WebSocket = client.newWebSocket(request, listener)
-
-    }
+//    fun connectWebSocket(driverId: String) {
+//
+//        val request: Request = Request.Builder()
+//            .url("ws://88.99.94.84:8185/drivers-websocket")
+//            .build()
+//
+//        val listener = WebSocketListenerImplementation()
+//        val ws: WebSocket = client.newWebSocket(request, listener)
+//
+//    }
 
     fun getFormattedDate(): String {
         val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())

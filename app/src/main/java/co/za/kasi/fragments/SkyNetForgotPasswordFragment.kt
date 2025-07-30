@@ -120,18 +120,6 @@ class SkyNetForgotPasswordFragment : Fragment() {
                                 )
                                 snackBar?.show()
                                 ReusableFunctions.dismisSnackBar(snackBar)
-                            } else {
-                                intentFallBack!!.putExtra(
-                                    "error",
-                                    "Technical Error occurred. Please try in few minutes."
-                                )
-                                try {
-                                    startActivity(intentFallBack!!)
-                                } catch (e: Exception) {
-                                    return
-                                }
-
-                                safeActivity.finish()
                             }
                         } catch (e: IOException) {
                             throw RuntimeException(e)

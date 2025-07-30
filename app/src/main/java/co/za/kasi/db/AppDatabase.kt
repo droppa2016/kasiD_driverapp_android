@@ -9,7 +9,7 @@ import co.za.kasi.dao.WaybillDao
 import co.za.kasi.model.superApp.a.waybillData.Waybills
 import co.za.kasi.utils.converters.Converters
 
-@Database(entities = [Waybills::class], version = 2)
+@Database(entities = [Waybills::class], version = 3)
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun waybillDao(): WaybillDao

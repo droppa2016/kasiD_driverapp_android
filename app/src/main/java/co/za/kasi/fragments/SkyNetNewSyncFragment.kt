@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +24,7 @@ import co.za.kasi.databinding.FragmentSkyNetNewSyncBinding
 import co.za.kasi.db.AppDatabase
 import co.za.kasi.fragments.bottomnav.SkyHomeFragment
 import co.za.kasi.model.ManifestDTO
+import co.za.kasi.model.superApp.a.waybillData.Waybills
 import co.za.kasi.services.LocalStorage
 import co.za.kasi.services.SyncDataService
 import co.za.kasi.utils.ReusableFunctions
@@ -144,6 +146,7 @@ class SkyNetNewSyncFragment : Fragment() {
 
                 // STEP 1: Trip Summary
                 val tripSummaryRes = service.getTripSummary(token, driverId, date)
+                Log.e("","===============================api ${tripSummaryRes.code()}")
                 if (!tripSummaryRes.isSuccessful) {
                     showSyncFailed("Trip Summary failed")
                     return@launch
@@ -155,6 +158,7 @@ class SkyNetNewSyncFragment : Fragment() {
 
                 // STEP 2: Waybills
                 val waybillsRes = service.getDriverDeliveryWaybills(token, driverId, date)
+                Log.e("","===============================api ${waybillsRes.code()}")
                 if (!waybillsRes.isSuccessful) {
                     showSyncFailed("Waybills fetch failed")
                     return@launch
@@ -163,13 +167,38 @@ class SkyNetNewSyncFragment : Fragment() {
                         val db = AppDatabase.getDatabase(safeContext).waybillDao()
                         CoroutineScope(Dispatchers.IO).launch {
                             db.deleteAllWaybills()
-                            db.insertWaybills(trip.map { it.copy(number = it.number) })
+
+                            val waybillEntities = trip.map { waybill ->
+                                Waybills(
+                                    number = waybill.number,
+                                    serviceType = waybill.serviceType,
+                                    date = waybill.date,
+                                    statusDescription = waybill.statusDescription,
+                                    deliveryBranch = waybill.deliveryBranch,
+                                    deliveryDate = waybill.deliveryDate,
+                                    deliveryConditions = waybill.deliveryConditions,
+                                    accountNumber = waybill.accountNumber,
+                                    parcels = waybill.parcels,
+                                    sender = waybill.sender,
+                                    captureDate = waybill.captureDate,
+                                    clientReference = waybill.clientReference,
+                                    consignee = waybill.consignee,
+                                    specialInstructions = waybill.specialInstructions,
+                                    orderNumber = waybill.orderNumber,
+                                    options = waybill.options,
+                                    consolidated = waybill.consolidated,
+                                    tripNumber = waybill.tripNumber,
+                                    consolidationId = waybill.consolidationId
+                                )
+                            }
+                            db.insertWaybills(waybillEntities)
                         }
                     }
                 }
 
                 // STEP 3: Statistics
                 val statsRes = service.getWaybillStats(token, driverId)
+                Log.e("","===============================api ${statsRes.code()}")
                 if (!statsRes.isSuccessful) {
                     showSyncFailed("Statistics fetch failed")
                     return@launch

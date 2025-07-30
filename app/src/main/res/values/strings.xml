@@ -250,7 +250,7 @@
 
 
     <!--Important URL's-->
-    <string name="BaseUrl">http://88.99.94.84:8185</string>
+    <string name="BaseUrl">https://clocking-api.droppa.co.za/kasid/</string>
     <string name="vehicle_registration">Vehicle Registration</string>
     <string name="sync_data">Sync Data</string>
     <string name="home">Home</string>

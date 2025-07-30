@@ -42,9 +42,15 @@ import co.za.kasi.services.SuperAppHttpService
 import co.za.kasi.services.location.LocationService1
 import co.za.kasi.utils.ReusableFunctions
 import com.google.android.material.snackbar.Snackbar
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Body
+import retrofit2.http.POST
+import retrofit2.Response
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
 import retrofit2.Callback
-import retrofit2.Response
 import java.io.IOException
 
 class SkyNetSignInFragment : Fragment() {
@@ -244,11 +250,32 @@ class SkyNetSignInFragment : Fragment() {
 
     private fun gainAccess(idNumber: String, pwd: String) {
 
+
+        val logging = HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
+
+        val client = OkHttpClient.Builder()
+            .addInterceptor(logging)
+            .build()
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://clocking-api.droppa.co.za/kasid/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(client)
+            .build()
+
+        val api = retrofit.create(SuperAppHttpService::class.java)
+
+
         val logInDTO = SkynetDriverAppLoginBody()
         logInDTO.driverIdNumber = idNumber
         logInDTO.password = pwd
-        val loginCreateCall = services!!.driverLogin(logInDTO)
+        val loginCreateCall = api.driverLogin(logInDTO)
+        Log.e("", "===================call login ==$loginCreateCall")
         loginCreateCall.enqueue(object : Callback<SkynetDriverAppLoginBodyResponse?> {
+
+
 
             override fun onResponse(
                 call: Call<SkynetDriverAppLoginBodyResponse?>,
@@ -256,6 +283,7 @@ class SkyNetSignInFragment : Fragment() {
             ) {
                 ReusableFunctions.hideLoader(loader)
                 Log.e("", "===================response login ==" + response.code())
+                Log.e("", "===================response login ==" + response.message())
 
                 if (response.code() == 200) {
 
@@ -320,17 +348,7 @@ class SkyNetSignInFragment : Fragment() {
                                 )
                                 snackBar?.show()
                             } else {
-                                intentFallBack!!.putExtra(
-                                    "error",
-                                    "Technical Error occurred. Please try in few minutes."
-                                )
-                                try {
-                                    startActivity(intentFallBack!!)
-                                } catch (e: Exception) {
-                                    return
-                                }
 
-                                safeActivity.finish()
                             }
                         } catch (e: IOException) {
                             throw RuntimeException(e)
